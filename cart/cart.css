@@ -1,0 +1,15 @@
+/* CART - cart.css
+   ERROR: If cart table/summary looks wrong -> check here */
+.page-header { background: linear-gradient(135deg, #2c3e50, #3498db); color: #fff; padding: 60px 0; margin-bottom: 40px; }
+.breadcrumb-item a { color: rgba(255,255,255,.7); }
+.breadcrumb-item.active { color: #fff; }
+.breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.5); }
+.cart-table { border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.08); }
+.cart-table thead { background: #2c3e50; color: #fff; }
+.cart-table thead th { border: none; padding: 15px; }
+.cart-table tbody td { vertical-align: middle; padding: 15px; border-bottom: 1px solid #eee; }
+.cart-item-img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; }
+.cart-summary { background: #f8f9fa; border-radius: 15px; padding: 30px; position: sticky; top: 80px; }
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: #e74c3c; color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; }
+.scroll-top.show { display: flex; }
+@media (max-width: 768px) { .cart-table { font-size: .85rem; } .cart-item-img { width: 50px; height: 50px; } .cart-summary { position: static; } }

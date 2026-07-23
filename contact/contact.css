@@ -1,0 +1,11 @@
+/* CONTACT - contact.css
+   ERROR: If contact form/info card looks wrong -> check here */
+.page-header { background: linear-gradient(135deg, #2c3e50, #3498db); color: #fff; padding: 60px 0; margin-bottom: 40px; }
+.breadcrumb-item a { color: rgba(255,255,255,.7); }
+.breadcrumb-item.active { color: #fff; }
+.breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.5); }
+.contact-info { background: #2c3e50; color: #fff; border-radius: 15px; padding: 40px; }
+.contact-form-card { background: #fff; border-radius: 15px; padding: 40px; box-shadow: 0 5px 20px rgba(0,0,0,.08); }
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: #e74c3c; color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; }
+.scroll-top.show { display: flex; }
+@media (max-width: 768px) { .contact-info, .contact-form-card { padding: 25px; } }
