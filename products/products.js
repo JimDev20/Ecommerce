@@ -35,8 +35,10 @@ function renderProducts(list){
       '<h6 class="card-title fw-bold mt-1">'+p.name+'</h6>'+
       '<p class="text-muted small mb-1" style="font-size:.8rem;">'+p.desc+'</p>'+
       '<p class="fw-bold text-danger mb-2">&#8369;'+p.price+'</p>'+
-      '<button class="btn btn-sm btn-custom w-100" onclick="addToCart(\''+p.name+'\','+p.price+',\''+p.img+'\')"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>'+
-      '</div></div></div>';
+      '<div class="d-flex gap-2">'+
+      '<a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="btn btn-sm btn-outline-secondary flex-grow-1"><i class="bi bi-eye me-1"></i>View Details</a>'+
+      '<button class="btn btn-sm btn-custom" onclick="addToCart(\''+p.name+'\','+p.price+',\''+p.img+'\')"><i class="bi bi-cart-plus"></i></button>'+
+      '</div></div></div></div>';
   }).join('');
 }
 

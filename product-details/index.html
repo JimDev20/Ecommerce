@@ -66,6 +66,7 @@
       <div class="mb-3"><label class="form-label fw-bold">Weight:</label><div class="d-flex gap-2">
         <button class="btn btn-outline-secondary btn-sm px-3 active" onclick="this.parentElement.querySelectorAll('.btn').forEach(function(b){b.classList.remove('active')});this.classList.add('active')">500g</button>
         <button class="btn btn-outline-secondary btn-sm px-3" onclick="this.parentElement.querySelectorAll('.btn').forEach(function(b){b.classList.remove('active')});this.classList.add('active')">250g</button>
+        <button class="btn btn-link btn-sm text-decoration-none" data-bs-toggle="modal" data-bs-target="#sizeGuideModal"><i class="bi bi-rulers me-1"></i>Size Guide</button>
       </div></div>
       <div class="mb-4"><label class="form-label fw-bold">Quantity:</label><div class="d-flex align-items-center gap-3">
         <button class="btn btn-outline-secondary" onclick="var i=document.getElementById('qty');if(i.value>1)i.value--">-</button>
@@ -107,6 +108,34 @@
   <div class="col-lg-2 col-md-4"><h6 class="fw-bold mb-3">Links</h6><ul class="list-unstyled"><li class="mb-2"><a href="../home/index.html" style="color:#c4a882;text-decoration:none;">Home</a></li><li class="mb-2"><a href="../products/index.html" style="color:#c4a882;text-decoration:none;">Products</a></li><li class="mb-2"><a href="../about/index.html" style="color:#c4a882;text-decoration:none;">About</a></li></ul></div>
   <div class="col-lg-3 col-md-4"><h6 class="fw-bold mb-3">Contact</h6><ul class="list-unstyled"><li class="mb-2" style="color:#c4a882;"><i class="bi bi-geo-alt me-2"></i>Cavite, Philippines</li><li class="mb-2" style="color:#c4a882;"><i class="bi bi-telephone me-2"></i>+63 912 345 6789</li></ul></div>
 </div><hr class="border-secondary mt-3"><div class="text-center pt-2"><small style="color:#c4a882;">&copy; 2026 Uncle George Bread &amp; Pastries.</small></div></div></footer>
+
+<!-- SIZE GUIDE MODAL -->
+<div class="modal fade" id="sizeGuideModal" tabindex="-1" aria-labelledby="sizeGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background:linear-gradient(135deg,#5D4037,#D2691E);color:#fff;">
+        <h5 class="modal-title" id="sizeGuideModalLabel"><i class="bi bi-rulers me-2"></i>Bread Size Guide</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered text-center">
+          <thead class="table-light">
+            <tr><th>Size</th><th>Weight</th><th>Serves</th><th>Best For</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="badge bg-secondary">Small</span></td><td>250g</td><td>1-2 persons</td><td>Individual snack</td></tr>
+            <tr><td><span class="badge bg-primary">Medium</span></td><td>500g</td><td>3-4 persons</td><td>Family meal</td></tr>
+            <tr><td><span class="badge bg-dark">Large</span></td><td>750g</td><td>5-6 persons</td><td>Party / gathering</td></tr>
+          </tbody>
+        </table>
+        <p class="text-muted small mb-0"><i class="bi bi-info-circle me-1"></i>Weights may vary slightly. All breads are baked fresh daily.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <button class="scroll-top" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></button>
 <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
