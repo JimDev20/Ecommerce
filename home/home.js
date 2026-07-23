@@ -1,4 +1,4 @@
-// Home page - featured products + nav cart count + scroll to top
+// Home page - featured products + nav cart count
 var featuredProducts = [
   {name:"French Baguette",price:85,img:"../images/products/p1-baguette.jpg",cat:"Loaf Breads"},
   {name:"White Bread",price:65,img:"../images/products/p2-white-bread.jpg",cat:"Loaf Breads"},
@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded',function(){
   var n=c.reduce(function(s,i){return s+i.qty},0);
   var el=document.getElementById('navCartCount');
   if(el&&n>0){el.textContent=n;el.classList.add('badge','bg-danger');}
-  var b=document.getElementById('scrollTopBtn');
-  if(b){window.addEventListener('scroll',function(){b.classList.toggle('show',window.scrollY>300)});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});}
 });
 
 function addToCart(name,price,image){

@@ -1,10 +1,10 @@
-// Cart page - render, update, remove items, promo code, checkout
+// Cart page - render, update, remove items, checkout
 var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
 
 function saveCart(){localStorage.setItem('unclegorg_cart',JSON.stringify(cart));}
 
 function updateCartCount(){
-  var n=cart.reduce(function(s,i){return s+i.quantity},0);
+  var n=cart.reduce(function(s,i){return s+i.qty},0);
   var el=document.getElementById('navCartCount');
   if(el){el.textContent=n;if(n>0){el.classList.add('badge','bg-danger')}else{el.classList.remove('badge','bg-danger')}}
 }
@@ -18,19 +18,19 @@ function renderCart(){
   if(cart.length===0){body.innerHTML='';table.classList.add('d-none');empty.classList.remove('d-none');actions.classList.add('d-none');updateTotals();return;}
   table.classList.remove('d-none');empty.classList.add('d-none');actions.classList.remove('d-none');
   body.innerHTML=cart.map(function(item,i){
-    return '<tr><td><div class="d-flex align-items-center"><img src="'+item.image+'" class="cart-item-img me-3"><span>'+item.name+'</span></div></td>'+
+    return '<tr><td><div class="d-flex align-items-center"><img src="'+item.img+'" class="cart-item-img me-3"><span>'+item.name+'</span></div></td>'+
     '<td>₱'+item.price.toFixed(2)+'</td>'+
     '<td><div class="d-flex align-items-center"><button class="btn btn-sm btn-outline-secondary" onclick="changeQty('+i+',-1)">-</button>'+
-    '<input type="number" class="form-control form-control-sm text-center mx-1" value="'+item.quantity+'" readonly style="width:60px;">'+
+    '<input type="number" class="form-control form-control-sm text-center mx-1" value="'+item.qty+'" readonly style="width:60px;">'+
     '<button class="btn btn-sm btn-outline-secondary" onclick="changeQty('+i+',1)">+</button></div></td>'+
-    '<td class="fw-bold">₱'+(item.price*item.quantity).toFixed(2)+'</td>'+
+    '<td class="fw-bold">₱'+(item.price*item.qty).toFixed(2)+'</td>'+
     '<td><button class="btn btn-sm btn-outline-danger" onclick="removeItem('+i+')"><i class="bi bi-trash"></i></button></td></tr>';
   }).join('');
   updateTotals();
 }
 
 function updateTotals(){
-  var sub=cart.reduce(function(s,i){return s+i.price*i.quantity},0);
+  var sub=cart.reduce(function(s,i){return s+i.price*i.qty},0);
   var tax=sub*0.12;
   var total=sub+tax;
   document.getElementById('cartTotal').textContent='₱'+sub.toFixed(2);
@@ -38,7 +38,7 @@ function updateTotals(){
   document.getElementById('grandTotal').textContent='₱'+total.toFixed(2);
 }
 
-function changeQty(i,d){cart[i].quantity+=d;if(cart[i].quantity<=0)cart.splice(i,1);saveCart();renderCart();updateCartCount();}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);saveCart();renderCart();updateCartCount();}
 function removeItem(i){cart.splice(i,1);saveCart();renderCart();updateCartCount();}
 function clearCart(){cart=[];saveCart();renderCart();updateCartCount();showAlert('Cart cleared.');}
 
@@ -48,12 +48,6 @@ function showAlert(msg){
     setTimeout(function(){a.classList.add('d-none')},3000);}
 }
 
-function applyPromo(){
-  var code=document.getElementById('promoInput').value.trim();
-  if(code){showAlert('Promo "'+code+'" applied! (Demo)');}
-  else{showAlert('Enter a promo code.');}
-}
-
 function checkout(){
   if(cart.length===0){showAlert('Your cart is empty!');return;}
   showAlert('Proceeding to checkout... (Demo)');
@@ -61,6 +55,4 @@ function checkout(){
 
 document.addEventListener('DOMContentLoaded',function(){
   renderCart();updateCartCount();
-  var b=document.getElementById('scrollTopBtn');
-  if(b){window.addEventListener('scroll',function(){b.classList.toggle('show',window.scrollY>300)});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});}
 });

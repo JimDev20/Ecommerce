@@ -1,4 +1,4 @@
-// Products page - product grid, pagination, filters, add to cart
+// Products page - product grid, pagination, add to cart
 var products=[
   {name:"French Baguette",price:85,img:"../images/products/p1-baguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
   {name:"White Bread",price:65,img:"../images/products/p2-white-bread.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},
@@ -17,17 +17,10 @@ var products=[
 var currentPage=1;
 var perPage=8;
 
-function getFiltered(){
-  var active=document.querySelector('#filters button.active');
-  var cat=active?active.dataset.cat:'all';
-  if(cat==='all') return products;
-  return products.filter(function(p){return p.cat===cat});
-}
-
-function renderProducts(list){
+function renderProducts(){
   var g=document.getElementById('productsGrid');
   var start=(currentPage-1)*perPage;
-  var page=list.slice(start,start+perPage);
+  var page=products.slice(start,start+perPage);
   g.innerHTML=page.map(function(p){
     return '<div class="col-lg-3 col-md-4 col-6 mb-4"><div class="card product-card h-100"><div class="overflow-hidden">'+
       '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div><div class="card-body">'+
@@ -42,8 +35,8 @@ function renderProducts(list){
   }).join('');
 }
 
-function renderPagination(total){
-  var pages=Math.ceil(total/perPage);
+function renderPagination(){
+  var pages=Math.ceil(products.length/perPage);
   var pag=document.getElementById('pagination');
   if(!pag)return;
   var html='<li class="page-item '+(currentPage===1?'disabled':'')+'"><a class="page-link" href="#" onclick="goPage('+(currentPage-1)+');return false;"><i class="bi bi-chevron-left"></i></a></li>';
@@ -55,38 +48,22 @@ function renderPagination(total){
 }
 
 function goPage(p){
-  var filtered=getFiltered();
-  var maxPage=Math.ceil(filtered.length/perPage);
+  var maxPage=Math.ceil(products.length/perPage);
   if(p<1||p>maxPage)return;
   currentPage=p;
-  renderProducts(filtered);
-  renderPagination(filtered.length);
+  renderProducts();
+  renderPagination();
   window.scrollTo({top:200,behavior:'smooth'});
 }
 
 document.addEventListener('DOMContentLoaded',function(){
-  var filtered=getFiltered();
-  renderProducts(filtered);
-  renderPagination(filtered.length);
+  renderProducts();
+  renderPagination();
 
   var c=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
   var n=c.reduce(function(s,i){return s+i.qty},0);
   var el=document.getElementById('navCartCount');
   if(el&&n>0){el.textContent=n;el.classList.add('badge','bg-danger');}
-
-  document.querySelectorAll('#filters button').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      document.querySelectorAll('#filters button').forEach(function(b){b.classList.remove('active')});
-      this.classList.add('active');
-      currentPage=1;
-      var f=getFiltered();
-      renderProducts(f);
-      renderPagination(f.length);
-    });
-  });
-
-  var sb=document.getElementById('scrollTopBtn');
-  if(sb){window.addEventListener('scroll',function(){sb.classList.toggle('show',window.scrollY>300)});sb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});}
 });
 
 function addToCart(name,price,image){
