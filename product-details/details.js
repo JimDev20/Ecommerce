@@ -1,4 +1,4 @@
-/* DETAILS - details.js */
+// Product details - add to cart + nav cart count + scroll to top
 function addToCart(name, price, img) {
   var qty = parseInt(document.getElementById('qty').value) || 1;
   var cart = JSON.parse(localStorage.getItem('unclegorg_cart') || '[]');

@@ -1,6 +1,4 @@
-/* CONTACT - contact.js
-   Form validation + cart count + scroll top.
-   ERROR: If form doesn't submit or validation broken -> check here */
+// Contact page - form validation + nav cart count + scroll to top
 document.addEventListener('DOMContentLoaded',function(){
   // Cart count
   var c=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');

@@ -1,6 +1,4 @@
-/* PRODUCTS - products.js
-   Uncle George Bread & Pastries - 12 real products
-   ERROR: If products don't show or filters broken -> check here */
+// Products page - product grid, pagination, filters, add to cart
 var products=[
   {name:"French Baguette",price:85,img:"../images/products/p1-baguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
   {name:"White Bread",price:65,img:"../images/products/p2-white-bread.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},

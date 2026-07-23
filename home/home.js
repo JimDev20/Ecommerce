@@ -1,5 +1,4 @@
-/* HOME - home.js
-   Featured products + cart count + scroll top */
+// Home page - featured products + nav cart count + scroll to top
 var featuredProducts = [
   {name:"French Baguette",price:85,img:"../images/products/p1-baguette.jpg",cat:"Loaf Breads"},
   {name:"White Bread",price:65,img:"../images/products/p2-white-bread.jpg",cat:"Loaf Breads"},

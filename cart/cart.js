@@ -1,6 +1,4 @@
-/* CART - cart.js
-   Full cart system: add/remove/update/render/save.
-   ERROR: If cart doesn't work at all -> check this file */
+// Cart page - render, update, remove items, promo code, checkout
 var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
 
 function saveCart(){localStorage.setItem('unclegorg_cart',JSON.stringify(cart));}

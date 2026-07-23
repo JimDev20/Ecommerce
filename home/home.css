@@ -1,5 +1,4 @@
-/* HOME - home.css
-   Bakery-themed landing page styles */
+/* Home page styles */
 
 /* Hero */
 .hero-section { background: linear-gradient(135deg, #FFF8F0 0%, #FFECD2 50%, #FCB69F 100%); padding: 80px 0; min-height: 85vh; display: flex; align-items: center; }

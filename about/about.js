@@ -1,6 +1,4 @@
-/* ABOUT - about.js
-   Cart count + scroll top only.
-   ERROR: If scroll top broken -> check here */
+// About page - scroll to top + nav cart count
 document.addEventListener('DOMContentLoaded',function(){
   var c=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
   var n=c.reduce(function(s,i){return s+i.quantity},0);
