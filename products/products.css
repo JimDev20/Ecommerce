@@ -1,12 +1,16 @@
-/* PRODUCTS - products.css
-   ERROR: If product grid/pagination looks wrong -> check here */
+/* PRODUCTS - products.css */
 .page-header { background: linear-gradient(135deg, #5D4037, #D2691E); color: #fff; padding: 60px 0; margin-bottom: 40px; }
 .breadcrumb-item a { color: rgba(255,255,255,.7); }
 .breadcrumb-item.active { color: #fff; }
 .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.5); }
-.product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.08); transition: all .3s; height: 100%; }
-.product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,.15); }
-.product-card .card-img-top { height: 220px; object-fit: cover; }
+.product-card { border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.06); transition: all .3s; height: 100%; }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(139,69,19,.12); }
+.product-card .card-img-top { height: 200px; object-fit: cover; transition: transform .4s; }
+.product-card:hover .card-img-top { transform: scale(1.05); }
+.btn-custom { background: linear-gradient(135deg, #D2691E, #8B4513); border: none; color: #fff; padding: 10px 24px; border-radius: 50px; font-weight: 600; }
+.btn-custom:hover { background: linear-gradient(135deg, #8B4513, #654321); color: #fff; }
+.page-link { color: #D2691E; }
+.page-item.active .page-link { background: #D2691E; border-color: #D2691E; }
 .scroll-top { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: #D2691E; color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; }
 .scroll-top.show { display: flex; }
-@media (max-width: 768px) { .product-card .card-img-top { height: 180px; } }
+@media (max-width: 768px) { .product-card .card-img-top { height: 150px; } }

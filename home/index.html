@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uncle Gorg - Home</title>
+  <title>Uncle Gorg - Freshly Baked Bread</title>
   <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../lib/bootstrap-icons/css/bootstrap-icons.min.css">
   <link rel="stylesheet" href="home.css">
@@ -13,7 +13,10 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="../images/brand/logo.png" alt="Logo">Uncle Gorg</a>
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="../images/brand/logo.png" alt="Uncle Gorg" style="height:40px;width:40px;object-fit:cover;border-radius:8px;" class="me-2">
+      <span class="fw-bold">Uncle Gorg</span>
+    </a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse justify-content-end">
       <ul class="navbar-nav me-3">
@@ -22,12 +25,12 @@
         <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
       </ul>
-      <a href="../cart/index.html" class="btn btn-outline-light"><i class="bi bi-cart3"></i><span id="navCartCount"></span></a>
+      <a href="../cart/index.html" class="btn btn-outline-light position-relative"><i class="bi bi-cart3"></i><span id="navCartCount"></span></a>
     </div>
   </div>
 </nav>
 <div class="offcanvas offcanvas-end" tabindex="-1" id="nav">
-  <div class="offcanvas-header"><h5 class="text-white">Uncle Gorg</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+  <div class="offcanvas-header"><h5 class="text-white">Uncle Gorg</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
   <div class="offcanvas-body">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-2"></i>Home</a></li>
@@ -39,98 +42,239 @@
   </div>
 </div>
 
-<!-- HERO -->
-<section class="hero" style="margin-top:56px;">
+<!-- HERO SECTION -->
+<section class="hero-section" style="margin-top:56px;">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <h1>Welcome to Uncle Gorg</h1>
-        <p>Freshly baked bread delivered to your doorstep. Quality ingredients, authentic taste.</p>
-        <a href="../products/index.html" class="btn btn-custom me-2"><i class="bi bi-bag me-2"></i>Shop Now</a>
-        <a href="../about/index.html" class="btn btn-outline-w"><i class="bi bi-info-circle me-2"></i>Learn More</a>
+    <div class="row align-items-center min-vh-75">
+      <div class="col-lg-6 hero-text">
+        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6"><i class="bi bi-fire me-1"></i> Freshly Baked Daily</span>
+        <h1 class="display-4 fw-bold">Baked with Love,<br>Served with Warmth</h1>
+        <p class="lead my-4">From our ovens to your table. Uncle Gorg brings you the freshest breads and pastries made with premium ingredients and time-honored recipes.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="../products/index.html" class="btn btn-custom btn-lg px-4"><i class="bi bi-bag me-2"></i>Shop Now</a>
+          <a href="../about/index.html" class="btn btn-outline-custom btn-lg px-4"><i class="bi bi-play-circle me-2"></i>Our Story</a>
+        </div>
+        <div class="d-flex gap-4 mt-5">
+          <div><h4 class="fw-bold mb-0 text-primary">12+</h4><small class="text-muted">Bread Variants</small></div>
+          <div><h4 class="fw-bold mb-0 text-primary">5K+</h4><small class="text-muted">Happy Customers</small></div>
+          <div><h4 class="fw-bold mb-0 text-primary">Daily</h4><small class="text-muted">Fresh Bakes</small></div>
+        </div>
       </div>
-      <div class="col-lg-6 text-center mt-4 mt-lg-0">
-        <img src="../images/decoration/banner.jpg" alt="Banner" class="img-fluid rounded shadow-lg">
+      <div class="col-lg-6 text-center mt-5 mt-lg-0">
+        <div class="hero-image-wrapper">
+          <img src="../images/decoration/banner.jpg" alt="Fresh Bread" class="img-fluid rounded-4 shadow-lg hero-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-5 bg-light">
+  <div class="container py-4">
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card text-center p-4 h-100">
+          <div class="feature-icon mx-auto mb-3"><i class="bi bi-egg-fried"></i></div>
+          <h5 class="fw-bold">Premium Ingredients</h5>
+          <p class="text-muted mb-0 small">Only the finest flour, butter, and natural ingredients in every loaf.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card text-center p-4 h-100">
+          <div class="feature-icon mx-auto mb-3"><i class="bi bi-fire"></i></div>
+          <h5 class="fw-bold">Baked Fresh Daily</h5>
+          <p class="text-muted mb-0 small">Every bread is baked fresh each morning. Never stale, always delicious.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card text-center p-4 h-100">
+          <div class="feature-icon mx-auto mb-3"><i class="bi bi-truck"></i></div>
+          <h5 class="fw-bold">Fast Delivery</h5>
+          <p class="text-muted mb-0 small">Same-day delivery for orders over &#8369;200. Warm bread at your door.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card text-center p-4 h-100">
+          <div class="feature-icon mx-auto mb-3"><i class="bi bi-heart"></i></div>
+          <h5 class="fw-bold">Made with Love</h5>
+          <p class="text-muted mb-0 small">Family recipes passed down through generations. Taste the difference.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FEATURED PRODUCTS -->
-<section style="padding:80px 0;">
-  <div class="container">
-    <div class="text-center"><h2 class="fw-bold">Featured Breads</h2><p class="text-muted mb-5">Handpicked favorites just for you</p></div>
-    <div class="row g-4">
-      <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product1.jpg" class="card-img-top" alt="French Baguette"></div>
-        <div class="card-body"><span class="badge bg-danger">Sale</span><h5 class="card-title mt-2">French Baguette</h5>
-        <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i></div>
-        <p class="fw-bold text-danger">₱85 <small class="text-decoration-line-through text-muted">₱120</small></p>
-        <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('French Baguette',85,'../images/products/product1.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product2.jpg" class="card-img-top" alt="White Loaf"></div>
-        <div class="card-body"><span class="badge bg-success">New</span><h5 class="card-title mt-2">White Loaf Bread</h5>
-        <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i></div>
-        <p class="fw-bold text-danger">₱65</p>
-        <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('White Loaf Bread',65,'../images/products/product2.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product3.jpg" class="card-img-top" alt="Wheat Loaf"></div>
-        <div class="card-body"><span class="badge bg-danger">Sale</span><h5 class="card-title mt-2">Wheat Loaf Bread</h5>
-        <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i></div>
-        <p class="fw-bold text-danger">₱75 <small class="text-decoration-line-through text-muted">₱110</small></p>
-        <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('Wheat Loaf Bread',75,'../images/products/product3.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product4.jpg" class="card-img-top" alt="Cheese Loaf"></div>
-        <div class="card-body"><span class="badge bg-info">Popular</span><h5 class="card-title mt-2">Cheese Loaf Bread</h5>
-        <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i></div>
-        <p class="fw-bold text-danger">₱95</p>
-        <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('Cheese Loaf Bread',95,'../images/products/product4.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
-      </div>
+<section class="py-5">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary-subtle text-primary mb-2 px-3">Our Bestsellers</span>
+      <h2 class="fw-bold display-6">Featured Breads</h2>
+      <p class="text-muted">Handpicked favorites our customers love the most</p>
     </div>
-    <div class="text-center mt-4"><a href="../products/index.html" class="btn btn-custom px-4">View All Products <i class="bi bi-arrow-right ms-2"></i></a></div>
+    <div class="row g-4" id="featuredGrid"></div>
+    <div class="text-center mt-5">
+      <a href="../products/index.html" class="btn btn-custom btn-lg px-5">View All Products <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
   </div>
 </section>
 
 <!-- CATEGORIES -->
-<section style="padding:60px 0;" class="bg-light">
-  <div class="container">
-    <div class="text-center"><h2 class="fw-bold">Shop by Category</h2><p class="text-muted mb-5">Find your favorite bread</p></div>
+<section class="py-5 bg-light">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary-subtle text-primary mb-2 px-3">Browse</span>
+      <h2 class="fw-bold display-6">Shop by Category</h2>
+      <p class="text-muted">Find your perfect bread</p>
+    </div>
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/electronics.jpg" alt="Loaf Breads"><div class="overlay"><h5 class="mb-0"><i class="bi bi-bag me-2"></i>Loaf Breads</h5><small>8+ Products</small></div></div></div>
-      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/fashion.jpg" alt="Specialty Breads"><div class="overlay"><h5 class="mb-0"><i class="bi bi-star me-2"></i>Specialty Breads</h5><small>5+ Products</small></div></div></div>
-      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/accessories.jpg" alt="Pandesal & Rolls"><div class="overlay"><h5 class="mb-0"><i class="bi bi-circle me-2"></i>Pandesal & Rolls</h5><small>6+ Products</small></div></div></div>
+      <div class="col-lg-4 col-md-6">
+        <a href="../products/index.html" class="text-decoration-none">
+          <div class="category-card rounded-4 overflow-hidden position-relative">
+            <img src="../images/categories/electronics.jpg" alt="Loaf Breads" class="img-fluid w-100" style="height:280px;object-fit:cover;">
+            <div class="category-overlay position-absolute bottom-0 start-0 end-0 p-4 text-white">
+              <h4 class="fw-bold mb-1">Loaf Breads</h4>
+              <p class="mb-0 opacity-75">Classic white, wheat, cheese, and more</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <a href="../products/index.html" class="text-decoration-none">
+          <div class="category-card rounded-4 overflow-hidden position-relative">
+            <img src="../images/categories/fashion.jpg" alt="Specialty Breads" class="img-fluid w-100" style="height:280px;object-fit:cover;">
+            <div class="category-overlay position-absolute bottom-0 start-0 end-0 p-4 text-white">
+              <h4 class="fw-bold mb-1">Specialty Breads</h4>
+              <p class="mb-0 opacity-75">Cranberry walnut, multigrain, and more</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <a href="../products/index.html" class="text-decoration-none">
+          <div class="category-card rounded-4 overflow-hidden position-relative">
+            <img src="../images/categories/accessories.jpg" alt="Pandesal & Pastries" class="img-fluid w-100" style="height:280px;object-fit:cover;">
+            <div class="category-overlay position-absolute bottom-0 start-0 end-0 p-4 text-white">
+              <h4 class="fw-bold mb-1">Pandesal & Pastries</h4>
+              <p class="mb-0 opacity-75">Fresh pandesal, egg rolls, and pastries</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PROMO BANNER -->
-<section style="padding:60px 0;">
+<section class="py-5">
   <div class="container">
-    <div class="promo text-center p-5 rounded-4 text-white" style="background:linear-gradient(135deg,#8B4513,#D2691E);">
-      <h2 class="fw-bold mb-3">Fresh Bake Sale! Up to 40% Off</h2><p class="mb-4 opacity-75">Limited time offer on selected breads.</p>
-      <a href="../products/index.html" class="btn btn-light btn-lg px-5 fw-bold"><i class="bi bi-lightning-fill me-2"></i>Shop the Sale</a>
+    <div class="promo-banner rounded-4 text-center p-5 text-white position-relative overflow-hidden">
+      <div class="promo-bg"></div>
+      <div class="position-relative">
+        <h2 class="fw-bold display-5 mb-3">Fresh Bake Sale!</h2>
+        <p class="mb-4 fs-5 opacity-90">Up to 40% off on selected breads. Limited time only.</p>
+        <a href="../products/index.html" class="btn btn-light btn-lg px-5 fw-bold"><i class="bi bi-lightning-fill me-2"></i>Shop the Sale</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-5 bg-light">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary-subtle text-primary mb-2 px-3">Reviews</span>
+      <h2 class="fw-bold display-6">What Our Customers Say</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100 p-4 rounded-4">
+          <div class="mb-3"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i></div>
+          <p class="text-muted mb-4">"The best pandesal I've ever tasted! Fresh and soft every morning. My family won't eat any other brand now."</p>
+          <div class="d-flex align-items-center"><div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white fw-bold" style="width:45px;height:45px;">M</div><div class="ms-3"><h6 class="fw-bold mb-0">Maria Reyes</h6><small class="text-muted">Regular Customer</small></div></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100 p-4 rounded-4">
+          <div class="mb-3"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i></div>
+          <p class="text-muted mb-4">"Uncle Gorg's French Baguette is amazing! Crispy outside, soft inside. Perfect for our weekend breakfast."</p>
+          <div class="d-flex align-items-center"><div class="bg-success rounded-circle d-flex align-items-center justify-content-center text-white fw-bold" style="width:45px;height:45px;">J</div><div class="ms-3"><h6 class="fw-bold mb-0">Juan Santos</h6><small class="text-muted">Bread Lover</small></div></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100 p-4 rounded-4">
+          <div class="mb-3"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i></div>
+          <p class="text-muted mb-4">"Fast delivery and always fresh. The Ube Qeso Pandesal is a must-try! Great quality at affordable prices."</p>
+          <div class="d-flex align-items-center"><div class="bg-danger rounded-circle d-flex align-items-center justify-content-center text-white fw-bold" style="width:45px;height:45px;">A</div><div class="ms-3"><h6 class="fw-bold mb-0">Ana Cruz</h6><small class="text-muted">Online Shopper</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="py-5">
+  <div class="container py-4">
+    <div class="newsletter-card rounded-4 p-5 text-center text-white">
+      <h3 class="fw-bold mb-2"><i class="bi bi-envelope-heart me-2"></i>Stay Fresh with Us</h3>
+      <p class="mb-4 opacity-75">Subscribe for exclusive deals, new bread releases, and baking tips.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="input-group">
+            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+            <button class="btn btn-light btn-lg fw-bold">Subscribe</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="text-white" style="background:#1a1a2e;">
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-lg-4 mb-4"><h5><i class="bi bi-bag-fill me-2"></i>Uncle Gorg</h5><p class="opacity-75">Freshly baked bread, delivered to your door.</p>
-        <div><a href="#" class="text-white me-2"><i class="bi bi-facebook fs-5"></i></a><a href="#" class="text-white me-2"><i class="bi bi-twitter-x fs-5"></i></a><a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a></div></div>
-      <div class="col-lg-2 mb-4"><h5>Links</h5><ul class="list-unstyled"><li class="mb-2"><a href="index.html" class="text-secondary">Home</a></li><li class="mb-2"><a href="../products/index.html" class="text-secondary">Products</a></li><li class="mb-2"><a href="../about/index.html" class="text-secondary">About</a></li><li class="mb-2"><a href="../contact/index.html" class="text-secondary">Contact</a></li></ul></div>
-      <div class="col-lg-3 mb-4"><h5>Service</h5><ul class="list-unstyled"><li class="mb-2"><a href="#" class="text-secondary">FAQs</a></li><li class="mb-2"><a href="#" class="text-secondary">Delivery Info</a></li><li class="mb-2"><a href="#" class="text-secondary">Returns</a></li></ul></div>
-      <div class="col-lg-3 mb-4"><h5>Contact</h5><ul class="list-unstyled"><li class="mb-2 text-secondary"><i class="bi bi-geo-alt me-2"></i>Cavite, Philippines</li><li class="mb-2 text-secondary"><i class="bi bi-telephone me-2"></i>+63 912 345 6789</li><li class="mb-2 text-secondary"><i class="bi bi-envelope me-2"></i>info@unclegorg.com</li></ul></div>
+<footer class="text-white pt-5 pb-3" style="background:#2c1810;">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <img src="../images/brand/logo.png" alt="Uncle Gorg" style="height:50px;width:50px;object-fit:cover;border-radius:10px;" class="me-3">
+          <div><h5 class="fw-bold mb-0">Uncle Gorg</h5><small class="opacity-75">Bakery & Pastries</small></div>
+        </div>
+        <p class="opacity-75 small">Bringing warmth to every table with freshly baked breads and pastries since 2026. Made with love, served with care.</p>
+        <div><a href="#" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a><a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a><a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter-x"></i></a><a href="#" class="text-white fs-5"><i class="bi bi-tiktok"></i></a></div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html" class="text-decoration-none" style="color:#c4a882;">Home</a></li>
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Products</a></li>
+          <li class="mb-2"><a href="../about/index.html" class="text-decoration-none" style="color:#c4a882;">About</a></li>
+          <li class="mb-2"><a href="../contact/index.html" class="text-decoration-none" style="color:#c4a882;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <h6 class="fw-bold mb-3">Products</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Loaf Breads</a></li>
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Specialty Breads</a></li>
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Pandesal & Rolls</a></li>
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Pastries</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <h6 class="fw-bold mb-3">Contact Us</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2" style="color:#c4a882;"><i class="bi bi-geo-alt me-2"></i>Cavite, Philippines</li>
+          <li class="mb-2" style="color:#c4a882;"><i class="bi bi-telephone me-2"></i>+63 912 345 6789</li>
+          <li class="mb-2" style="color:#c4a882;"><i class="bi bi-envelope me-2"></i>info@unclegorg.com</li>
+          <li class="mb-2" style="color:#c4a882;"><i class="bi bi-clock me-2"></i>Mon-Sat: 6AM-6PM</li>
+        </ul>
+      </div>
     </div>
-    <div class="text-center pt-3 border-top border-secondary"><small class="text-secondary">&copy; 2026 Uncle Gorg. All rights reserved.</small></div>
+    <hr class="border-secondary mt-4">
+    <div class="text-center pt-2">
+      <small style="color:#c4a882;">&copy; 2026 Uncle Gorg Bakery. All rights reserved.</small>
+    </div>
   </div>
 </footer>
 

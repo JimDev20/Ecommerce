@@ -1,22 +1,54 @@
 /* HOME - home.css
-   Only styles Bootstrap can't handle.
-   ERROR: If hero/banner looks wrong -> check here */
+   Bakery-themed landing page styles */
 
-.hero { background: linear-gradient(135deg, #5D4037, #D2691E); color: #fff; padding: 100px 0; position: relative; overflow: hidden; }
-.hero::after { content: ''; position: absolute; top: -50%; right: -20%; width: 500px; height: 500px; background: rgba(255,255,255,.05); border-radius: 50%; }
-.hero h1 { font-size: 3rem; font-weight: 700; }
-.hero p { font-size: 1.2rem; opacity: .9; margin-bottom: 2rem; }
-.btn-custom { background: #D2691E; border: none; color: #fff; padding: 12px 30px; border-radius: 30px; font-weight: 600; }
-.btn-custom:hover { background: #8B4513; color: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(210,105,30,.4); }
-.btn-outline-w { border: 2px solid #fff; color: #fff; padding: 12px 30px; border-radius: 30px; font-weight: 600; }
-.btn-outline-w:hover { background: #fff; color: #5D4037; }
-.product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.08); transition: all .3s; }
-.product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,.15); }
-.product-card .card-img-top { height: 220px; object-fit: cover; }
-.category-card { border-radius: 15px; overflow: hidden; position: relative; height: 250px; cursor: pointer; }
-.category-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,.2); }
-.category-card img { width: 100%; height: 100%; object-fit: cover; }
-.category-card .overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,.8)); padding: 30px 20px 20px; color: #fff; }
-.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: #D2691E; color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; }
+/* Hero */
+.hero-section { background: linear-gradient(135deg, #FFF8F0 0%, #FFECD2 50%, #FCB69F 100%); padding: 80px 0; min-height: 85vh; display: flex; align-items: center; }
+.hero-text h1 { color: #2c1810; line-height: 1.2; }
+.hero-text p { color: #6b4f3a; font-size: 1.15rem; }
+.hero-image-wrapper { position: relative; }
+.hero-img { max-height: 480px; object-fit: cover; }
+.hero-image-wrapper::before { content: ''; position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: #D2691E; border-radius: 50%; opacity: .15; z-index: -1; }
+.hero-image-wrapper::after { content: ''; position: absolute; bottom: -15px; left: -15px; width: 80px; height: 80px; background: #8B4513; border-radius: 50%; opacity: .1; z-index: -1; }
+.min-vh-75 { min-height: 75vh; }
+
+/* Buttons */
+.btn-custom { background: linear-gradient(135deg, #D2691E, #8B4513); border: none; color: #fff; padding: 14px 32px; border-radius: 50px; font-weight: 600; transition: all .3s; }
+.btn-custom:hover { background: linear-gradient(135deg, #8B4513, #654321); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(210,105,30,.35); }
+.btn-outline-custom { border: 2px solid #D2691E; color: #D2691E; padding: 14px 32px; border-radius: 50px; font-weight: 600; transition: all .3s; background: transparent; }
+.btn-outline-custom:hover { background: #D2691E; color: #fff; transform: translateY(-2px); }
+
+/* Features */
+.feature-card { background: #fff; border-radius: 16px; transition: all .3s; border: 1px solid #f0e6dc; }
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(139,69,19,.12); }
+.feature-icon { width: 70px; height: 70px; background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #D2691E; }
+
+/* Product Cards */
+.product-card { border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.06); transition: all .3s; background: #fff; }
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(139,69,19,.15); }
+.product-card .card-img-top { height: 220px; object-fit: cover; transition: transform .5s; }
+.product-card:hover .card-img-top { transform: scale(1.05); }
+.product-card .overflow-hidden { overflow: hidden; }
+
+/* Categories */
+.category-card { transition: all .4s; }
+.category-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,.2); }
+.category-overlay { background: linear-gradient(transparent, rgba(44,24,16,.85)); padding: 30px 20px 20px !important; }
+
+/* Promo Banner */
+.promo-banner { background: linear-gradient(135deg, #D2691E, #8B4513); position: relative; overflow: hidden; }
+.promo-bg { position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: rgba(255,255,255,.05); border-radius: 50%; }
+
+/* Newsletter */
+.newsletter-card { background: linear-gradient(135deg, #2c1810, #5D4037); }
+
+/* Scroll Top */
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #D2691E, #8B4513); color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; font-size: 1.2rem; box-shadow: 0 5px 15px rgba(139,69,19,.3); }
 .scroll-top.show { display: flex; }
-@media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hero-section { padding: 40px 0; min-height: auto; }
+  .hero-text h1 { font-size: 2.2rem; }
+  .hero-img { max-height: 300px; }
+  .min-vh-75 { min-height: auto; }
+}
