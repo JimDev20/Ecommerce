@@ -1,12 +1,12 @@
 /* PRODUCTS - products.css
    ERROR: If product grid/pagination looks wrong -> check here */
-.page-header { background: linear-gradient(135deg, #2c3e50, #3498db); color: #fff; padding: 60px 0; margin-bottom: 40px; }
+.page-header { background: linear-gradient(135deg, #5D4037, #D2691E); color: #fff; padding: 60px 0; margin-bottom: 40px; }
 .breadcrumb-item a { color: rgba(255,255,255,.7); }
 .breadcrumb-item.active { color: #fff; }
 .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.5); }
 .product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.08); transition: all .3s; height: 100%; }
 .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,.15); }
 .product-card .card-img-top { height: 220px; object-fit: cover; }
-.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: #e74c3c; color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; }
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: #D2691E; color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; }
 .scroll-top.show { display: flex; }
 @media (max-width: 768px) { .product-card .card-img-top { height: 180px; } }

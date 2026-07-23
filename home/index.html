@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JimShop - Home</title>
+  <title>Uncle Gorg - Home</title>
   <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../lib/bootstrap-icons/css/bootstrap-icons.min.css">
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR (Bootstrap offcanvas) ===== -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="../images/brand/logo.png" alt="Logo">JimShop</a>
+    <a class="navbar-brand" href="index.html"><img src="../images/brand/logo.png" alt="Logo">Uncle Gorg</a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse justify-content-end">
       <ul class="navbar-nav me-3">
@@ -27,7 +27,7 @@
   </div>
 </nav>
 <div class="offcanvas offcanvas-end" tabindex="-1" id="nav">
-  <div class="offcanvas-header"><h5 class="text-white">JimShop</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+  <div class="offcanvas-header"><h5 class="text-white">Uncle Gorg</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
   <div class="offcanvas-body">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-2"></i>Home</a></li>
@@ -39,13 +39,13 @@
   </div>
 </div>
 
-<!-- ===== HERO (Bootstrap grid + utilities) ===== -->
+<!-- HERO -->
 <section class="hero" style="margin-top:56px;">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <h1>Welcome to JimShop</h1>
-        <p>Discover the best products at unbeatable prices with fast delivery.</p>
+        <h1>Welcome to Uncle Gorg</h1>
+        <p>Freshly baked bread delivered to your doorstep. Quality ingredients, authentic taste.</p>
         <a href="../products/index.html" class="btn btn-custom me-2"><i class="bi bi-bag me-2"></i>Shop Now</a>
         <a href="../about/index.html" class="btn btn-outline-w"><i class="bi bi-info-circle me-2"></i>Learn More</a>
       </div>
@@ -56,81 +56,81 @@
   </div>
 </section>
 
-<!-- ===== FEATURED PRODUCTS (Bootstrap cards + grid) ===== -->
+<!-- FEATURED PRODUCTS -->
 <section style="padding:80px 0;">
   <div class="container">
-    <div class="text-center"><h2 class="fw-bold">Featured Products</h2><p class="text-muted mb-5">Handpicked items just for you</p></div>
+    <div class="text-center"><h2 class="fw-bold">Featured Breads</h2><p class="text-muted mb-5">Handpicked favorites just for you</p></div>
     <div class="row g-4">
       <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product1.jpg" class="card-img-top" alt="Headphones"></div>
-        <div class="card-body"><span class="badge bg-danger">Sale</span><h5 class="card-title mt-2">Wireless Headphones</h5>
+        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product1.jpg" class="card-img-top" alt="French Baguette"></div>
+        <div class="card-body"><span class="badge bg-danger">Sale</span><h5 class="card-title mt-2">French Baguette</h5>
         <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i></div>
-        <p class="fw-bold text-danger">₱1,299 <small class="text-decoration-line-through text-muted">₱1,999</small></p>
+        <p class="fw-bold text-danger">₱85 <small class="text-decoration-line-through text-muted">₱120</small></p>
         <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('Wireless Headphones',1299,'../images/products/product1.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
+        <button class="btn btn-sm btn-custom" onclick="addToCart('French Baguette',85,'../images/products/product1.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
       </div>
       <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product2.jpg" class="card-img-top" alt="Watch"></div>
-        <div class="card-body"><span class="badge bg-success">New</span><h5 class="card-title mt-2">Smart Watch</h5>
+        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product2.jpg" class="card-img-top" alt="White Loaf"></div>
+        <div class="card-body"><span class="badge bg-success">New</span><h5 class="card-title mt-2">White Loaf Bread</h5>
         <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i></div>
-        <p class="fw-bold text-danger">₱2,499</p>
+        <p class="fw-bold text-danger">₱65</p>
         <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('Smart Watch',2499,'../images/products/product2.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
+        <button class="btn btn-sm btn-custom" onclick="addToCart('White Loaf Bread',65,'../images/products/product2.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
       </div>
       <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product3.jpg" class="card-img-top" alt="Shoes"></div>
-        <div class="card-body"><span class="badge bg-danger">Sale</span><h5 class="card-title mt-2">Running Shoes</h5>
+        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product3.jpg" class="card-img-top" alt="Wheat Loaf"></div>
+        <div class="card-body"><span class="badge bg-danger">Sale</span><h5 class="card-title mt-2">Wheat Loaf Bread</h5>
         <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i></div>
-        <p class="fw-bold text-danger">₱2,199 <small class="text-decoration-line-through text-muted">₱3,499</small></p>
+        <p class="fw-bold text-danger">₱75 <small class="text-decoration-line-through text-muted">₱110</small></p>
         <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('Running Shoes',2199,'../images/products/product3.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
+        <button class="btn btn-sm btn-custom" onclick="addToCart('Wheat Loaf Bread',75,'../images/products/product3.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
       </div>
       <div class="col-lg-3 col-md-6">
-        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product4.jpg" class="card-img-top" alt="Backpack"></div>
-        <div class="card-body"><span class="badge bg-info">Popular</span><h5 class="card-title mt-2">Travel Backpack</h5>
+        <div class="card product-card h-100"><div class="overflow-hidden"><img src="../images/products/product4.jpg" class="card-img-top" alt="Cheese Loaf"></div>
+        <div class="card-body"><span class="badge bg-info">Popular</span><h5 class="card-title mt-2">Cheese Loaf Bread</h5>
         <div class="mb-2"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i></div>
-        <p class="fw-bold text-danger">₱1,599</p>
+        <p class="fw-bold text-danger">₱95</p>
         <a href="../product-details/index.html" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-eye"></i></a>
-        <button class="btn btn-sm btn-custom" onclick="addToCart('Travel Backpack',1599,'../images/products/product4.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
+        <button class="btn btn-sm btn-custom" onclick="addToCart('Cheese Loaf Bread',95,'../images/products/product4.jpg')"><i class="bi bi-cart-plus"></i></button></div></div>
       </div>
     </div>
     <div class="text-center mt-4"><a href="../products/index.html" class="btn btn-custom px-4">View All Products <i class="bi bi-arrow-right ms-2"></i></a></div>
   </div>
 </section>
 
-<!-- ===== CATEGORIES (Bootstrap grid) ===== -->
+<!-- CATEGORIES -->
 <section style="padding:60px 0;" class="bg-light">
   <div class="container">
-    <div class="text-center"><h2 class="fw-bold">Shop by Category</h2><p class="text-muted mb-5">Find what you need</p></div>
+    <div class="text-center"><h2 class="fw-bold">Shop by Category</h2><p class="text-muted mb-5">Find your favorite bread</p></div>
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/electronics.jpg" alt="Electronics"><div class="overlay"><h5 class="mb-0"><i class="bi bi-laptop me-2"></i>Electronics</h5><small>120+ Products</small></div></div></div>
-      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/fashion.jpg" alt="Fashion"><div class="overlay"><h5 class="mb-0"><i class="bi bi-handbag me-2"></i>Fashion</h5><small>250+ Products</small></div></div></div>
-      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/accessories.jpg" alt="Accessories"><div class="overlay"><h5 class="mb-0"><i class="bi bi-watch me-2"></i>Accessories</h5><small>180+ Products</small></div></div></div>
+      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/electronics.jpg" alt="Loaf Breads"><div class="overlay"><h5 class="mb-0"><i class="bi bi-bag me-2"></i>Loaf Breads</h5><small>8+ Products</small></div></div></div>
+      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/fashion.jpg" alt="Specialty Breads"><div class="overlay"><h5 class="mb-0"><i class="bi bi-star me-2"></i>Specialty Breads</h5><small>5+ Products</small></div></div></div>
+      <div class="col-lg-4 col-md-6"><div class="category-card"><img src="../images/categories/accessories.jpg" alt="Pandesal & Rolls"><div class="overlay"><h5 class="mb-0"><i class="bi bi-circle me-2"></i>Pandesal & Rolls</h5><small>6+ Products</small></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROMO BANNER (Bootstrap utility) ===== -->
+<!-- PROMO BANNER -->
 <section style="padding:60px 0;">
   <div class="container">
-    <div class="promo text-center p-5 rounded-4 text-white" style="background:linear-gradient(135deg,#2c3e50,#3498db);">
-      <h2 class="fw-bold mb-3">Big Sale! Up to 50% Off</h2><p class="mb-4 opacity-75">Limited time offer on selected items.</p>
+    <div class="promo text-center p-5 rounded-4 text-white" style="background:linear-gradient(135deg,#8B4513,#D2691E);">
+      <h2 class="fw-bold mb-3">Fresh Bake Sale! Up to 40% Off</h2><p class="mb-4 opacity-75">Limited time offer on selected breads.</p>
       <a href="../products/index.html" class="btn btn-light btn-lg px-5 fw-bold"><i class="bi bi-lightning-fill me-2"></i>Shop the Sale</a>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER (Bootstrap grid) ===== -->
+<!-- FOOTER -->
 <footer class="text-white" style="background:#1a1a2e;">
   <div class="container py-5">
     <div class="row">
-      <div class="col-lg-4 mb-4"><h5><i class="bi bi-bag-fill me-2"></i>JimShop</h5><p class="opacity-75">Quality products at great prices.</p>
+      <div class="col-lg-4 mb-4"><h5><i class="bi bi-bag-fill me-2"></i>Uncle Gorg</h5><p class="opacity-75">Freshly baked bread, delivered to your door.</p>
         <div><a href="#" class="text-white me-2"><i class="bi bi-facebook fs-5"></i></a><a href="#" class="text-white me-2"><i class="bi bi-twitter-x fs-5"></i></a><a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a></div></div>
       <div class="col-lg-2 mb-4"><h5>Links</h5><ul class="list-unstyled"><li class="mb-2"><a href="index.html" class="text-secondary">Home</a></li><li class="mb-2"><a href="../products/index.html" class="text-secondary">Products</a></li><li class="mb-2"><a href="../about/index.html" class="text-secondary">About</a></li><li class="mb-2"><a href="../contact/index.html" class="text-secondary">Contact</a></li></ul></div>
-      <div class="col-lg-3 mb-4"><h5>Service</h5><ul class="list-unstyled"><li class="mb-2"><a href="#" class="text-secondary">FAQs</a></li><li class="mb-2"><a href="#" class="text-secondary">Shipping</a></li><li class="mb-2"><a href="#" class="text-secondary">Returns</a></li></ul></div>
-      <div class="col-lg-3 mb-4"><h5>Contact</h5><ul class="list-unstyled"><li class="mb-2 text-secondary"><i class="bi bi-geo-alt me-2"></i>Cavite, Philippines</li><li class="mb-2 text-secondary"><i class="bi bi-telephone me-2"></i>+63 912 345 6789</li><li class="mb-2 text-secondary"><i class="bi bi-envelope me-2"></i>info@jimshop.com</li></ul></div>
+      <div class="col-lg-3 mb-4"><h5>Service</h5><ul class="list-unstyled"><li class="mb-2"><a href="#" class="text-secondary">FAQs</a></li><li class="mb-2"><a href="#" class="text-secondary">Delivery Info</a></li><li class="mb-2"><a href="#" class="text-secondary">Returns</a></li></ul></div>
+      <div class="col-lg-3 mb-4"><h5>Contact</h5><ul class="list-unstyled"><li class="mb-2 text-secondary"><i class="bi bi-geo-alt me-2"></i>Cavite, Philippines</li><li class="mb-2 text-secondary"><i class="bi bi-telephone me-2"></i>+63 912 345 6789</li><li class="mb-2 text-secondary"><i class="bi bi-envelope me-2"></i>info@unclegorg.com</li></ul></div>
     </div>
-    <div class="text-center pt-3 border-top border-secondary"><small class="text-secondary">&copy; 2026 JimShop. All rights reserved.</small></div>
+    <div class="text-center pt-3 border-top border-secondary"><small class="text-secondary">&copy; 2026 Uncle Gorg. All rights reserved.</small></div>
   </div>
 </footer>
 

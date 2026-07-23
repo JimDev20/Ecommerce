@@ -2,18 +2,18 @@
    Renders product grid, handles filters.
    ERROR: If products don't show or filters broken -> check here */
 var products=[
-  {name:"Wireless Headphones",price:1299,img:"../images/products/product1.jpg",cat:"Electronics",badge:"Sale",badgeCls:"bg-danger",desc:"Premium noise-cancelling headphones."},
-  {name:"Smart Watch Pro",price:2499,img:"../images/products/product2.jpg",cat:"Electronics",badge:"New",badgeCls:"bg-success",desc:"Health tracking and GPS."},
-  {name:"Running Shoes",price:2199,old:3499,img:"../images/products/product3.jpg",cat:"Sports",badge:"Sale",badgeCls:"bg-danger",desc:"Lightweight daily trainers."},
-  {name:"Travel Backpack",price:1599,img:"../images/products/product4.jpg",cat:"Accessories",badge:"Popular",badgeCls:"bg-info",desc:"Water-resistant with laptop slot."},
-  {name:"Bluetooth Speaker",price:899,img:"../images/products/product5.jpg",cat:"Electronics",desc:"360-degree surround sound."},
-  {name:"Denim Jacket",price:1899,old:2599,img:"../images/products/product6.jpg",cat:"Fashion",badge:"Sale",badgeCls:"bg-danger",desc:"Classic modern fit."},
-  {name:"Polarized Sunglasses",price:799,img:"../images/products/product7.jpg",cat:"Accessories",desc:"UV400 protection."},
-  {name:"Wireless Mouse",price:599,img:"../images/products/product8.jpg",cat:"Electronics",badge:"New",badgeCls:"bg-success",desc:"Ergonomic adjustable DPI."},
-  {name:"Canvas Sneakers",price:1199,img:"../images/products/product9.jpg",cat:"Fashion",desc:"Multiple colors available."},
-  {name:"Mechanical Keyboard",price:1799,old:2299,img:"../images/products/product10.jpg",cat:"Electronics",badge:"Sale",badgeCls:"bg-danger",desc:"RGB blue switches."},
-  {name:"Sports Water Bottle",price:449,img:"../images/products/product11.jpg",cat:"Sports",desc:"24hr cold insulation."},
-  {name:"Leather Wallet",price:699,img:"../images/products/product12.jpg",cat:"Accessories",badge:"Popular",badgeCls:"bg-info",desc:"RFID blocking bifold."}
+  {name:"French Baguette",price:85,old:120,img:"../images/products/product1.jpg",cat:"Loaf Breads",badge:"Sale",badgeCls:"bg-danger",desc:"Classic French baguette, crispy outside, soft inside. 500g."},
+  {name:"White Loaf Bread",price:65,img:"../images/products/product2.jpg",cat:"Loaf Breads",badge:"New",badgeCls:"bg-success",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},
+  {name:"Wheat Loaf Bread",price:75,old:110,img:"../images/products/product3.jpg",cat:"Loaf Breads",badge:"Sale",badgeCls:"bg-danger",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
+  {name:"Cheese Loaf Bread",price:95,img:"../images/products/product4.jpg",cat:"Loaf Breads",badge:"Popular",badgeCls:"bg-info",desc:"Rich cheese-flavored loaf. A family favorite. 550g."},
+  {name:"Butter Loaf Bread",price:85,img:"../images/products/product5.jpg",cat:"Loaf Breads",desc:"Buttery and soft. Great for toast and breakfast. 550g."},
+  {name:"Butter Milk Loaf",price:90,img:"../images/products/product6.jpg",cat:"Loaf Breads",badge:"New",badgeCls:"bg-success",desc:"Creamy milk-infused loaf. Extra soft texture. 550g."},
+  {name:"Monroe Bread",price:55,img:"../images/products/product7.jpg",cat:"Loaf Breads",desc:"Budget-friendly classic bread. Everyday essential. 500g."},
+  {name:"Super Budget Loaf",price:45,old:65,img:"../images/products/product8.jpg",cat:"Loaf Breads",badge:"Sale",badgeCls:"bg-danger",desc:"Affordable quality loaf for the whole family. 450g."},
+  {name:"Egg Pandesal",price:60,img:"../images/products/product9.jpg",cat:"Pandesal & Rolls",badge:"Popular",badgeCls:"bg-info",desc:"Soft Filipino egg pandesal rolls. Freshly baked daily."},
+  {name:"Ube Qeso Pandesal",price:75,img:"../images/products/product10.jpg",cat:"Pandesal & Rolls",badge:"New",badgeCls:"bg-success",desc:"Purple yam and cheese pandesal. Sweet and savory."},
+  {name:"Whole Wheat Multi-Grain",price:85,img:"../images/products/product11.jpg",cat:"Specialty Breads",desc:"All-natural multi-grain blend. Nutritious and filling. 550g."},
+  {name:"Cranberry Walnut Bread",price:95,img:"../images/products/product12.jpg",cat:"Specialty Breads",badge:"Popular",badgeCls:"bg-info",desc:"Breakfast bread with cranberries and walnuts. 500g."}
 ];
 
 function renderProducts(list){
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded',function(){
   renderProducts(products);
 
   // Cart count
-  var c=JSON.parse(localStorage.getItem('jimshop_cart')||'[]');
+  var c=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
   var n=c.reduce(function(s,i){return s+i.quantity},0);
   var el=document.getElementById('navCartCount');
   if(el&&n>0){el.textContent=n;el.classList.add('badge','bg-danger');}
@@ -57,12 +57,11 @@ document.addEventListener('DOMContentLoaded',function(){
   if(sb){window.addEventListener('scroll',function(){sb.classList.toggle('show',window.scrollY>300)});sb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});}
 });
 
-// addToCart from localStorage cart system
 function addToCart(name,price,image){
-  var cart=JSON.parse(localStorage.getItem('jimshop_cart')||'[]');
+  var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
   var found=false;
   for(var i=0;i<cart.length;i++){if(cart[i].name===name){cart[i].quantity++;found=true;break;}}
   if(!found)cart.push({name:name,price:price,image:image,quantity:1});
-  localStorage.setItem('jimshop_cart',JSON.stringify(cart));
+  localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
   alert('Added to cart: '+name);
 }

@@ -1,9 +1,9 @@
 /* CART - cart.js
    Full cart system: add/remove/update/render/save.
    ERROR: If cart doesn't work at all -> check this file */
-var cart=JSON.parse(localStorage.getItem('jimshop_cart')||'[]');
+var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
 
-function saveCart(){localStorage.setItem('jimshop_cart',JSON.stringify(cart));}
+function saveCart(){localStorage.setItem('unclegorg_cart',JSON.stringify(cart));}
 
 function updateCartCount(){
   var n=cart.reduce(function(s,i){return s+i.quantity},0);
