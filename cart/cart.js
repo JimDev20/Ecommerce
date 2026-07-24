@@ -1,6 +1,12 @@
 // Cart page - render, update, remove items, checkout
 var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
 
+// Fix old data format (image -> img)
+cart.forEach(function(item){
+  if(item.image && !item.img){item.img=item.image;delete item.image;}
+});
+localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
+
 function saveCart(){localStorage.setItem('unclegorg_cart',JSON.stringify(cart));}
 
 function updateCartCount(){
