@@ -3,29 +3,30 @@ var products=[
   {name:"French Baguette",price:45,img:"../images/products/frenchBaguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
   {name:"Whole Wheat Loaf",price:110,img:"../images/products/wholeWheatLoaf.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 420g."},
   {name:"Whole Wheat Multigrain",price:110,img:"../images/products/wholeWheatMultigrain.jpg",cat:"Loaf Breads",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
-  {name:"Butter Bread",price:85,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Buttery and soft. Great for toast and breakfast. 550g."},
-  {name:"Cheese Bread",price:125,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Rich cheese-flavored loaf. A family favorite. 600g."},
+  {name:"Butter Bread",price:130,img:"../images/products/ciabattaBread.jpg",cat:"Loaf Breads",desc:"Artisan ciabatta bread with a crispy crust and airy, buttery interior. Perfect for toast and breakfast. 550g."},
+  {name:"Cheese Bread",price:145,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Rich cheese-flavored loaf. A family favorite. 600g."},
   {name:"Sandwich Pullman Loaf",price:110,img:"../images/products/sandwichPullmanLoaf.jpg",cat:"Loaf Breads",desc:"Classic pullman loaf. Square-shaped, soft, and perfect for sandwiches. 550g."},
   {name:"Sourdough Focaccia",price:180,img:"../images/products/sourDoughFocacciaBread.jpg",cat:"Loaf Breads",desc:"Artisan sourdough focaccia. Crusty outside, soft inside."},
   {name:"Cranberry Walnut Bread",price:155,img:"../images/products/cranberryWalnutBread.jpg",cat:"Loaf Breads",desc:"Whole wheat bread with cranberries and walnuts. 450g."},
   {name:"Hamburger Buns",price:150,img:"../images/products/hamburgerBuns.jpg",cat:"Loaf Breads",desc:"Soft hamburger buns. Perfect for burgers and sandwiches."},
   {name:"Raisin Bread",price:135,img:"../images/products/raisinBread.jpg",cat:"Loaf Breads",desc:"Sweet bread loaded with raisins. 500g."},
+  {name:"Sourdough Artisan Bread",price:120,img:"../images/products/sourdoughArtisanBread.jpg",cat:"Loaf Breads",desc:"Artisan sourdough bread with a crispy crust and soft, tangy interior. Handcrafted daily. 450g."},
   {name:"Whole Wheat Pandesal",price:102,img:"../images/products/wholeWheatPandesal.jpg",cat:"Bread Rolls",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
   {name:"Egg Pandesal",price:125,img:"../images/products/eggPandesal.jpg",cat:"Bread Rolls",desc:"Classic pandesal with egg. Soft and warm."},
   {name:"Qeso Pandesal",price:110,img:"../images/products/qesoPandesal.jpg",cat:"Bread Rolls",desc:"Cheese-flavored pandesal. Cheesy and soft."},
-  {name:"Mammon Rolls",price:43,img:"../images/products/mamonRolls.jpg",cat:"Bread Rolls",desc:"Soft brioche topped with butter, sugar, and cheese."},
+  {name:"Sourdough Artisan Bread",price:120,img:"../images/products/sourdoughArtisanBread.jpg",cat:"Loaf Breads",desc:"Artisan sourdough bread with a crispy crust and soft, tangy interior. Handcrafted daily. 450g."},
   {name:"Walnut Cinnamon Ring",price:155,img:"../images/products/cinnamonRolls.jpg",cat:"Bread Rolls",desc:"Sweet Filipino-style Spanish bread rolls. 520g."},
-  {name:"Mochi Bread",price:150,img:"../images/products/mochiBread.jpg",cat:"Bread Rolls",desc:"Sweet coconut-filled bread bun. Classic Filipino treat."},
+  {name:"Mochi Bread",price:150,img:"../images/products/mochiBread.jpg",cat:"Bread Rolls",desc:"Chewy bread with a soft, sticky texture. Classic Filipino treat."},
   {name:"Mamon Rolls",price:30,img:"../images/products/mamonRolls.jpg",cat:"Bread Rolls",desc:"Light and fluffy sponge cake rolls. Sweet and airy."},
-  {name:"Mochi Bread",price:45,img:"../images/products/mochiBread.jpg",cat:"Bread Rolls",desc:"Chewy mochi bread with a soft, sticky texture."},
+  {name:"Ciabatta Cheese",price:95,img:"../images/products/ciabattaCheese.jpg",cat:"Bread Rolls",desc:"Chewy ciabatta bread with real melted cheese baked into every bite. Crispy crust, soft interior."},
   {name:"Raisin Pan De Rosa",price:135,img:"../images/products/raisinPanDeRosa.jpg",cat:"Bread Rolls",desc:"Rose-shaped bread with raisins. Soft and sweet."},
-  {name:"Ube Pandan",price:130,img:"../images/products/ubePandan.jpg",cat:"Bread Rolls",desc:"Purple yam and pandan flavored bread. Filipino classic."},
+  {name:"Ube Pandan",price:130,img:"../images/products/cheesyubepandandelight.jpg",cat:"Bread Rolls",desc:"Purple yam and pandan flavored bread. Filipino classic."},
   {name:"Mini Monay",price:38,img:"../images/products/miniMonay.jpg",cat:"Bread Rolls",desc:"Soft and dense Filipino bread roll. Great with coffee or soup."},
   {name:"Chicken Pie",price:60,img:"../images/products/chickenPie.jpg",cat:"Pies & Pastries",desc:"Savory chicken-filled pastry. Flaky and delicious."},
   {name:"Chunky Chicken Pie",price:580,img:"../images/products/chunkyChickenPie.jpg",cat:"Pies & Pastries",desc:"Hearty chicken pie with chunky filling. Flaky crust. 9 inch pan."},
   {name:"Egg Pie",price:240,img:"../images/products/eggPie.jpg",cat:"Pies & Pastries",desc:"Classic Filipino egg pie. Creamy custard filling."},
   {name:"Hopia Baboy",price:220,img:"../images/products/hopiaBaboy.jpg",cat:"Pies & Pastries",desc:"Flaky pastry with savory pork filling. Classic Filipino snack."},
-  {name:"Cinnamon Rolls",price:40,img:"../images/products/cinnamonRolls.jpg",cat:"Pies & Pastries",desc:"Soft cinnamon rolls with sweet glaze. Warm and fresh."},
+  {name:"Hotdog Rolls",price:80,img:"../images/products/hotdogRolls.jpg",cat:"Bread Rolls",desc:"Soft bread rolls perfect for hotdogs. Fluffy and lightly toasted."},
   {name:"Banana Cake",price:180,img:"../images/products/bananCake.jpg",cat:"Cakes",desc:"Moist and fluffy banana cake. Made with real bananas."},
   {name:"Banana Carrot Cake",price:260,img:"../images/products/bananaCarrotCake.jpg",cat:"Cakes",desc:"Healthy banana carrot cake. Moist and flavorful."},
   {name:"Chocolate Cake",price:280,img:"../images/products/chocolateCake.jpg",cat:"Cakes",desc:"Rich chocolate cake. Decadent and moist."},
@@ -115,4 +116,7 @@ function addToCart(name,price,image){
   if(!found)cart.push({name:name,price:price,img:image,qty:1});
   localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
   alert('Added to cart: '+name);
+  var n=cart.reduce(function(s,i){return s+i.qty},0);
+  var el=document.getElementById('navCartCount');
+  if(el){el.textContent=n;el.classList.add('badge','bg-danger');}
 }
