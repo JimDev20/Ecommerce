@@ -14,7 +14,6 @@ var products=[
   {name:"Whole Wheat Pandesal",price:102,img:"../images/products/wholeWheatPandesal.jpg",cat:"Bread Rolls",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
   {name:"Egg Pandesal",price:125,img:"../images/products/eggPandesal.jpg",cat:"Bread Rolls",desc:"Classic pandesal with egg. Soft and warm."},
   {name:"Qeso Pandesal",price:110,img:"../images/products/qesoPandesal.jpg",cat:"Bread Rolls",desc:"Cheese-flavored pandesal. Cheesy and soft."},
-  {name:"Sourdough Artisan Bread",price:120,img:"../images/products/sourdoughArtisanBread.jpg",cat:"Loaf Breads",desc:"Artisan sourdough bread with a crispy crust and soft, tangy interior. Handcrafted daily. 450g."},
   {name:"Walnut Cinnamon Ring",price:155,img:"../images/products/cinnamonRolls.jpg",cat:"Bread Rolls",desc:"Sweet Filipino-style Spanish bread rolls. 520g."},
   {name:"Mochi Bread",price:150,img:"../images/products/mochiBread.jpg",cat:"Bread Rolls",desc:"Chewy bread with a soft, sticky texture. Classic Filipino treat."},
   {name:"Mamon Rolls",price:30,img:"../images/products/mamonRolls.jpg",cat:"Bread Rolls",desc:"Light and fluffy sponge cake rolls. Sweet and airy."},
