@@ -54,14 +54,13 @@ html, body { overflow-x: hidden; }
 .promo-slide a { display: flex; align-items: center; justify-content: center; height: 250px; }
 .promo-thumb { height: 250px; object-fit: contain; }
 
-/* Carousel arrows - beside image inside carousel-inner */
+/* Carousel arrows - right beside image */
 #promoCarousel .carousel-control-prev,
-#promoCarousel .carousel-control-next { width: 45px; height: 45px; top: 50%; transform: translateY(-50%); background: rgba(93,64,55,.85); border-radius: 50%; opacity: 1; }
-#promoCarousel .carousel-control-prev { left: 10px; }
-#promoCarousel .carousel-control-next { right: 10px; }
-#promoCarousel .carousel-control-prev-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); background-size: 18px; }
-#promoCarousel .carousel-control-next-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); background-size: 18px; }
-/* Mobile arrows below image */
+#promoCarousel .carousel-control-next { width: 40px; height: 40px; top: 50%; transform: translateY(-50%); background: rgba(93,64,55,.85); border-radius: 50%; opacity: 1; }
+#promoCarousel .carousel-control-prev { left: -20px; }
+#promoCarousel .carousel-control-next { right: -20px; }
+#promoCarousel .carousel-control-prev-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); background-size: 16px; }
+#promoCarousel .carousel-control-next-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); background-size: 16px; }
 #promoCarousel .carousel-indicators { position: static; margin: 15px 0 0; }
 
 /* Newsletter */
@@ -112,13 +111,8 @@ html, body { overflow-x: hidden; }
 }
 @media (max-width: 767px) {
   #promoCarousel .carousel-control-prev,
-  #promoCarousel .carousel-control-next { width: 36px; height: 36px; top: auto; bottom: -50px; transform: none; }
-  #promoCarousel .carousel-control-prev { left: calc(50% - 44px); }
-  #promoCarousel .carousel-control-next { right: calc(50% - 44px); }
-  #promoCarousel .carousel-control-prev-icon,
-  #promoCarousel .carousel-control-next-icon { background-size: 14px; }
-  #promoCarousel .carousel-indicators { display: none; }
-  .promo-slide { padding: 20px 0 60px; }
+  #promoCarousel .carousel-control-next { display: none; }
+  .promo-slide { padding: 20px 0; }
   .promo-slide a { height: 180px; }
   .promo-thumb { height: 180px; }
 }
