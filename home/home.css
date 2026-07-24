@@ -116,6 +116,8 @@ html, body { overflow-x: hidden; }
 @media (max-width: 767px) {
   .carousel-arrows-wrap .carousel-control-prev,
   .carousel-arrows-wrap .carousel-control-next { display: none; }
+  #promoCarousel { display: flex; flex-direction: column; }
+  #promoCarousel .carousel-indicators { order: 1; margin: 10px 0 0; }
   .promo-slide { padding: 20px 0; }
   .promo-slide a { height: 180px; }
   .promo-thumb { height: 180px; }
