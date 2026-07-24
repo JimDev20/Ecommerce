@@ -1,10 +1,10 @@
 // Home page - featured products + nav cart count
 var featuredProducts = [
   {name:"French Baguette",price:85,img:"../images/products/frenchBaguette.jpg",cat:"Loaf Breads"},
-  {name:"White Bread",price:65,img:"../images/products/wwLoaf.jpg",cat:"Loaf Breads"},
-  {name:"Cheese Bread",price:95,img:"../images/products/cranberryWalnutBread.jpg",cat:"Loaf Breads"},
+  {name:"Cheese Bread",price:95,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads"},
   {name:"Pinoy Pandesal",price:22,img:"../images/products/wwPandesal.jpg",cat:"Pastries"},
   {name:"Ensaymada",price:45,img:"../images/products/mamonRolls.jpg",cat:"Pastries"},
+  {name:"Chocolate Cake",price:65,img:"../images/products/chocolateCake.jpg",cat:"Pastries"},
   {name:"Ube Pandan",price:50,img:"../images/products/ubePandan.jpg",cat:"Pastries"}
 ];
 
