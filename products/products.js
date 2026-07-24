@@ -1,13 +1,13 @@
 // Products page - product grid, pagination, add to cart
 var products=[
   {name:"French Baguette",price:85,img:"../images/products/frenchBaguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
-  {name:"White Bread",price:65,img:"../images/products/wwLoaf.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},
-  {name:"Whole Wheat Bread",price:75,img:"../images/products/wwMultigrain.jpg",cat:"Loaf Breads",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
+  {name:"White Bread",price:65,img:"../images/products/wholeWheatLoaf.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},
+  {name:"Whole Wheat Bread",price:75,img:"../images/products/wholeWheatMultigrain.jpg",cat:"Loaf Breads",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
   {name:"Butter Bread",price:85,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Buttery and soft. Great for toast and breakfast. 550g."},
   {name:"Cheese Bread",price:95,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Rich cheese-flavored loaf. A family favorite. 550g."},
   {name:"Butter Milk Bread",price:90,img:"../images/products/sourDoughFocacciaBread.jpg",cat:"Loaf Breads",desc:"Creamy milk-infused loaf. Extra soft texture. 550g."},
   {name:"Sourdough Focaccia",price:95,img:"../images/products/sourDoughFocacciaBread.jpg",cat:"Loaf Breads",desc:"Artisan sourdough focaccia. Crusty outside, soft inside."},
-  {name:"Pinoy Pandesal",price:22,img:"../images/products/wwPandesal.jpg",cat:"Pastries",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
+  {name:"Pinoy Pandesal",price:22,img:"../images/products/wholeWheatPandesal.jpg",cat:"Pastries",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
   {name:"Egg Pandesal",price:25,img:"../images/products/eggPandesal.jpg",cat:"Pastries",desc:"Classic pandesal with egg. Soft and warm."},
   {name:"Qeso Pandesal",price:28,img:"../images/products/qesoPandesal.jpg",cat:"Pastries",desc:"Cheese-flavored pandesal. Cheesy and soft."},
   {name:"Chicken Pastel",price:55,img:"../images/products/chickenPie.jpg",cat:"Pastries",desc:"Savory chicken-filled pastry. Flaky and delicious."},
