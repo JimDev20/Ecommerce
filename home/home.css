@@ -4,7 +4,7 @@
 .navbar { background: #2c1810; }
 
 /* Hero */
-.hero-section { background: linear-gradient(135deg, rgba(44,24,16,.85) 0%, rgba(93,64,55,.75) 100%), url('../images/decoration/banner.jpg') center/cover no-repeat; padding: 80px 0; min-height: 85vh; display: flex; align-items: center; }
+.hero-section { background: linear-gradient(135deg, rgba(44,24,16,.9) 0%, rgba(93,64,55,.8) 100%), url('../images/decoration/banner.jpg') center/cover no-repeat; padding: 80px 0; min-height: 85vh; display: flex; align-items: center; }
 .hero-text { text-align: center; }
 .hero-text h1 { color: #fff; line-height: 1.2; }
 .hero-text p { color: rgba(255,255,255,.85); font-size: 1.15rem; }
