@@ -4,11 +4,6 @@
 .breadcrumb-item a { color: rgba(255,255,255,.7); }
 .breadcrumb-item.active { color: #fff; }
 .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.5); }
-.product-card { border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.06); transition: all .3s; height: 100%; }
-.product-card:hover { transform: translateY(-5px); }
-.product-card .card-img-top { height: 200px; object-fit: cover; }
-.thumb { opacity: .7; transition: all .3s; cursor: pointer; }
-.thumb:hover { opacity: 1; border: 2px solid #D2691E; }
 .btn-custom { background: linear-gradient(135deg, #D2691E, #8B4513); border: none; color: #fff; padding: 10px 24px; border-radius: 50px; font-weight: 600; }
 .btn-custom:hover { background: linear-gradient(135deg, #8B4513, #654321); color: #fff; }
 .scroll-top { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: #D2691E; color: #fff; border: none; display: none; align-items: center; justify-content: center; z-index: 1000; }

@@ -1,42 +1,66 @@
 // Products page - product grid, pagination, add to cart
 var products=[
-  {name:"French Baguette",price:85,img:"../images/products/frenchBaguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
-  {name:"White Bread",price:65,img:"../images/products/wholeWheatLoaf.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},
-  {name:"Whole Wheat Bread",price:75,img:"../images/products/wholeWheatMultigrain.jpg",cat:"Loaf Breads",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
+  {name:"French Baguette",price:45,img:"../images/products/frenchBaguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
+  {name:"Whole Wheat Loaf",price:110,img:"../images/products/wholeWheatLoaf.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 420g."},
+  {name:"Whole Wheat Multigrain",price:110,img:"../images/products/wholeWheatMultigrain.jpg",cat:"Loaf Breads",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
   {name:"Butter Bread",price:85,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Buttery and soft. Great for toast and breakfast. 550g."},
-  {name:"Cheese Bread",price:95,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Rich cheese-flavored loaf. A family favorite. 550g."},
-  {name:"Butter Milk Bread",price:90,img:"../images/products/sourDoughFocacciaBread.jpg",cat:"Loaf Breads",desc:"Creamy milk-infused loaf. Extra soft texture. 550g."},
-  {name:"Sourdough Focaccia",price:95,img:"../images/products/sourDoughFocacciaBread.jpg",cat:"Loaf Breads",desc:"Artisan sourdough focaccia. Crusty outside, soft inside."},
-  {name:"Pinoy Pandesal",price:22,img:"../images/products/wholeWheatPandesal.jpg",cat:"Pastries",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
-  {name:"Egg Pandesal",price:25,img:"../images/products/eggPandesal.jpg",cat:"Pastries",desc:"Classic pandesal with egg. Soft and warm."},
-  {name:"Qeso Pandesal",price:28,img:"../images/products/qesoPandesal.jpg",cat:"Pastries",desc:"Cheese-flavored pandesal. Cheesy and soft."},
-  {name:"Chicken Pastel",price:55,img:"../images/products/chickenPie.jpg",cat:"Pastries",desc:"Savory chicken-filled pastry. Flaky and delicious."},
-  {name:"Chunky Chicken Pie",price:60,img:"../images/products/chunkyChickenPie.jpg",cat:"Pastries",desc:"Hearty chicken pie with chunky filling. Flaky crust."},
-  {name:"Ensaymada",price:45,img:"../images/products/mamonRolls.jpg",cat:"Pastries",desc:"Soft brioche topped with butter, sugar, and cheese."},
-  {name:"Spanish Bread",price:35,img:"../images/products/cinnamonRolls.jpg",cat:"Pastries",desc:"Sweet Filipino-style Spanish bread rolls. 180g pack."},
-  {name:"Pan De Coco",price:40,img:"../images/products/mochiBread.jpg",cat:"Pastries",desc:"Sweet coconut-filled bread bun. Classic Filipino treat."},
-  {name:"Banana Cake",price:55,img:"../images/products/bananCake.jpg",cat:"Pastries",desc:"Moist and fluffy banana cake. Made with real bananas."},
-  {name:"Banana Carrot Cake",price:60,img:"../images/products/bananaCarrotCake.jpg",cat:"Pastries",desc:"Healthy banana carrot cake. Moist and flavorful."},
-  {name:"Chocolate Cake",price:65,img:"../images/products/chocolateCake.jpg",cat:"Pastries",desc:"Rich chocolate cake. Decadent and moist."},
-  {name:"Egg Pie",price:50,img:"../images/products/eggPie.jpg",cat:"Pastries",desc:"Classic Filipino egg pie. Creamy custard filling."},
-  {name:"Cinnamon Rolls",price:40,img:"../images/products/cinnamonRolls.jpg",cat:"Pastries",desc:"Soft cinnamon rolls with sweet glaze. Warm and fresh."},
-  {name:"Cranberry Walnut Bread",price:95,img:"../images/products/cranberryWalnutBread.jpg",cat:"Loaf Breads",desc:"Whole wheat bread with cranberries and walnuts. 500g."},
-  {name:"Hamburger Buns",price:70,img:"../images/products/hamburgerBuns.jpg",cat:"Loaf Breads",desc:"Soft hamburger buns. Perfect for burgers and sandwiches."},
-  {name:"Hopia Baboy",price:35,img:"../images/products/hopiaBaboy.jpg",cat:"Pastries",desc:"Flaky pastry with savory pork filling. Classic Filipino snack."},
-  {name:"Mamon Rolls",price:30,img:"../images/products/mamonRolls.jpg",cat:"Pastries",desc:"Light and fluffy sponge cake rolls. Sweet and airy."},
-  {name:"Mochi Bread",price:45,img:"../images/products/mochiBread.jpg",cat:"Pastries",desc:"Chewy mochi bread with a soft, sticky texture."},
-  {name:"Raisin Bread",price:80,img:"../images/products/raisinBread.jpg",cat:"Loaf Breads",desc:"Sweet bread loaded with raisins. 500g."},
-  {name:"Raisin Pan De Rosa",price:45,img:"../images/products/raisinPanDeRosa.jpg",cat:"Pastries",desc:"Rose-shaped bread with raisins. Soft and sweet."},
-  {name:"Ube Pandan",price:50,img:"../images/products/ubePandan.jpg",cat:"Pastries",desc:"Purple yam and pandan flavored bread. Filipino classic."}
+  {name:"Cheese Bread",price:125,img:"../images/products/cheeseLoafBread.jpg",cat:"Loaf Breads",desc:"Rich cheese-flavored loaf. A family favorite. 600g."},
+  {name:"Sandwich Pullman Loaf",price:110,img:"../images/products/sandwichPullmanLoaf.jpg",cat:"Loaf Breads",desc:"Classic pullman loaf. Square-shaped, soft, and perfect for sandwiches. 550g."},
+  {name:"Sourdough Focaccia",price:180,img:"../images/products/sourDoughFocacciaBread.jpg",cat:"Loaf Breads",desc:"Artisan sourdough focaccia. Crusty outside, soft inside."},
+  {name:"Cranberry Walnut Bread",price:155,img:"../images/products/cranberryWalnutBread.jpg",cat:"Loaf Breads",desc:"Whole wheat bread with cranberries and walnuts. 450g."},
+  {name:"Hamburger Buns",price:150,img:"../images/products/hamburgerBuns.jpg",cat:"Loaf Breads",desc:"Soft hamburger buns. Perfect for burgers and sandwiches."},
+  {name:"Raisin Bread",price:135,img:"../images/products/raisinBread.jpg",cat:"Loaf Breads",desc:"Sweet bread loaded with raisins. 500g."},
+  {name:"Whole Wheat Pandesal",price:102,img:"../images/products/wholeWheatPandesal.jpg",cat:"Bread Rolls",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
+  {name:"Egg Pandesal",price:125,img:"../images/products/eggPandesal.jpg",cat:"Bread Rolls",desc:"Classic pandesal with egg. Soft and warm."},
+  {name:"Qeso Pandesal",price:110,img:"../images/products/qesoPandesal.jpg",cat:"Bread Rolls",desc:"Cheese-flavored pandesal. Cheesy and soft."},
+  {name:"Mammon Rolls",price:43,img:"../images/products/mamonRolls.jpg",cat:"Bread Rolls",desc:"Soft brioche topped with butter, sugar, and cheese."},
+  {name:"Walnut Cinnamon Ring",price:155,img:"../images/products/cinnamonRolls.jpg",cat:"Bread Rolls",desc:"Sweet Filipino-style Spanish bread rolls. 520g."},
+  {name:"Mochi Bread",price:150,img:"../images/products/mochiBread.jpg",cat:"Bread Rolls",desc:"Sweet coconut-filled bread bun. Classic Filipino treat."},
+  {name:"Mamon Rolls",price:30,img:"../images/products/mamonRolls.jpg",cat:"Bread Rolls",desc:"Light and fluffy sponge cake rolls. Sweet and airy."},
+  {name:"Mochi Bread",price:45,img:"../images/products/mochiBread.jpg",cat:"Bread Rolls",desc:"Chewy mochi bread with a soft, sticky texture."},
+  {name:"Raisin Pan De Rosa",price:135,img:"../images/products/raisinPanDeRosa.jpg",cat:"Bread Rolls",desc:"Rose-shaped bread with raisins. Soft and sweet."},
+  {name:"Ube Pandan",price:130,img:"../images/products/ubePandan.jpg",cat:"Bread Rolls",desc:"Purple yam and pandan flavored bread. Filipino classic."},
+  {name:"Mini Monay",price:38,img:"../images/products/miniMonay.jpg",cat:"Bread Rolls",desc:"Soft and dense Filipino bread roll. Great with coffee or soup."},
+  {name:"Chicken Pie",price:60,img:"../images/products/chickenPie.jpg",cat:"Pies & Pastries",desc:"Savory chicken-filled pastry. Flaky and delicious."},
+  {name:"Chunky Chicken Pie",price:580,img:"../images/products/chunkyChickenPie.jpg",cat:"Pies & Pastries",desc:"Hearty chicken pie with chunky filling. Flaky crust. 9 inch pan."},
+  {name:"Egg Pie",price:240,img:"../images/products/eggPie.jpg",cat:"Pies & Pastries",desc:"Classic Filipino egg pie. Creamy custard filling."},
+  {name:"Hopia Baboy",price:220,img:"../images/products/hopiaBaboy.jpg",cat:"Pies & Pastries",desc:"Flaky pastry with savory pork filling. Classic Filipino snack."},
+  {name:"Cinnamon Rolls",price:40,img:"../images/products/cinnamonRolls.jpg",cat:"Pies & Pastries",desc:"Soft cinnamon rolls with sweet glaze. Warm and fresh."},
+  {name:"Banana Cake",price:180,img:"../images/products/bananCake.jpg",cat:"Cakes",desc:"Moist and fluffy banana cake. Made with real bananas."},
+  {name:"Banana Carrot Cake",price:260,img:"../images/products/bananaCarrotCake.jpg",cat:"Cakes",desc:"Healthy banana carrot cake. Moist and flavorful."},
+  {name:"Chocolate Cake",price:280,img:"../images/products/chocolateCake.jpg",cat:"Cakes",desc:"Rich chocolate cake. Decadent and moist."},
+  {name:"Caramel Cake",price:290,img:"../images/products/caramelCake.jpg",cat:"Cakes",desc:"Moist cake topped with rich, buttery caramel glaze. Sweet and indulgent."},
+  {name:"Mango Cake",price:275,img:"../images/products/mangoCake.jpg",cat:"Cakes",desc:"Light and fluffy cake made with fresh mango. Tropical and refreshing."},
+  {name:"Red Velvet Chocolate Cake",price:300,img:"../images/products/redVelvetChocolateCake.jpg",cat:"Cakes",desc:"Classic red velvet cake with chocolate and cream cheese frosting. Decadent."},
 ];
 
 var currentPage=1;
 var perPage=8;
+var currentCategory='all';
+
+function filterCategory(cat){
+  currentCategory=cat;
+  currentPage=1;
+  var btns=document.querySelectorAll('#categoryFilter .btn');
+  btns.forEach(function(b){
+    b.className='btn btn-sm btn-outline-secondary';
+  });
+  var idx={'all':0,'Loaf Breads':1,'Bread Rolls':2,'Pies & Pastries':3,'Cakes':4};
+  if(idx[cat]!==undefined){btns[idx[cat]].className='btn btn-sm btn-custom';}
+  renderProducts();
+  renderPagination();
+}
+
+function getFilteredProducts(){
+  if(currentCategory==='all')return products;
+  return products.filter(function(p){return p.cat===currentCategory;});
+}
 
 function renderProducts(){
   var g=document.getElementById('productsGrid');
+  var filtered=getFilteredProducts();
   var start=(currentPage-1)*perPage;
-  var page=products.slice(start,start+perPage);
+  var page=filtered.slice(start,start+perPage);
   g.innerHTML=page.map(function(p){
     return '<div class="col-lg-3 col-md-4 col-6 mb-4"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
       '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div></a><div class="card-body">'+
@@ -52,7 +76,8 @@ function renderProducts(){
 }
 
 function renderPagination(){
-  var pages=Math.ceil(products.length/perPage);
+  var filtered=getFilteredProducts();
+  var pages=Math.ceil(filtered.length/perPage);
   var pag=document.getElementById('pagination');
   if(!pag)return;
   var html='<li class="page-item '+(currentPage===1?'disabled':'')+'"><a class="page-link" href="#" onclick="goPage('+(currentPage-1)+');return false;"><i class="bi bi-chevron-left"></i></a></li>';
@@ -64,7 +89,8 @@ function renderPagination(){
 }
 
 function goPage(p){
-  var maxPage=Math.ceil(products.length/perPage);
+  var filtered=getFilteredProducts();
+  var maxPage=Math.ceil(filtered.length/perPage);
   if(p<1||p>maxPage)return;
   currentPage=p;
   renderProducts();

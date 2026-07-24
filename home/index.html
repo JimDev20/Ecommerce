@@ -77,7 +77,7 @@
   </div>
 </section>
 
-<!-- CATEGORIES -->
+<!-- PRODUCT CATEGORIES -->
 <section class="py-5 bg-light">
   <div class="container py-4">
     <div class="text-center mb-5">
@@ -86,10 +86,10 @@
       <p class="text-muted">Find your perfect bread</p>
     </div>
     <div class="row g-4 justify-content-center">
-      <div class="col-lg-5 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <a href="../products/index.html" class="text-decoration-none">
           <div class="category-card rounded-4 overflow-hidden position-relative">
-            <img src="../images/products/wholeWheatLoaf.jpg" alt="Loaf Breads" class="img-fluid w-100" style="height:280px;object-fit:cover;">
+            <img src="../images/products/frenchBaguette.jpg" alt="Loaf Breads" class="img-fluid w-100" style="height:250px;object-fit:cover;">
             <div class="category-overlay position-absolute bottom-0 start-0 end-0 p-4 text-white">
               <h4 class="fw-bold mb-1">Loaf Breads</h4>
               <p class="mb-0 opacity-75">White, Wheat, Butter, Cheese & more</p>
@@ -97,13 +97,35 @@
           </div>
         </a>
       </div>
-      <div class="col-lg-5 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <a href="../products/index.html" class="text-decoration-none">
           <div class="category-card rounded-4 overflow-hidden position-relative">
-            <img src="../images/products/wholeWheatPandesal.jpg" alt="Pastries" class="img-fluid w-100" style="height:280px;object-fit:cover;">
+            <img src="../images/products/wholeWheatPandesal.jpg" alt="Bread Rolls" class="img-fluid w-100" style="height:250px;object-fit:cover;">
             <div class="category-overlay position-absolute bottom-0 start-0 end-0 p-4 text-white">
-              <h4 class="fw-bold mb-1">Pastries</h4>
-              <p class="mb-0 opacity-75">Pandesal, Ensaymada, Spanish Bread & more</p>
+              <h4 class="fw-bold mb-1">Bread Rolls</h4>
+              <p class="mb-0 opacity-75">Pandesal, Mammon Rolls, Walnut Cinnamon Ring & more</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <a href="../products/index.html" class="text-decoration-none">
+          <div class="category-card rounded-4 overflow-hidden position-relative">
+            <img src="../images/products/chickenPie.jpg" alt="Pies & Pastries" class="img-fluid w-100" style="height:250px;object-fit:cover;">
+            <div class="category-overlay position-absolute bottom-0 start-0 end-0 p-4 text-white">
+              <h4 class="fw-bold mb-1">Pies &amp; Pastries</h4>
+              <p class="mb-0 opacity-75">Chicken Pie, Egg Pie, Hopia & more</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <a href="../products/index.html" class="text-decoration-none">
+          <div class="category-card rounded-4 overflow-hidden position-relative">
+            <img src="../images/products/chocolateCake.jpg" alt="Cakes" class="img-fluid w-100" style="height:250px;object-fit:cover;">
+            <div class="category-overlay position-absolute bottom-0 start-0 end-0 p-4 text-white">
+              <h4 class="fw-bold mb-1">Cakes</h4>
+              <p class="mb-0 opacity-75">Chocolate, Banana, Caramel & more</p>
             </div>
           </div>
         </a>
@@ -112,16 +134,40 @@
   </div>
 </section>
 
-<!-- PROMO BANNER -->
-<section class="py-5">
+<!-- PROMO CAROUSEL -->
+<section class="promo-section py-5">
   <div class="container">
-    <div class="promo-banner rounded-4 text-center p-5 text-white position-relative overflow-hidden">
-      <div class="promo-bg"></div>
-      <div class="position-relative">
-        <h2 class="fw-bold display-5 mb-3">Fresh Bake Sale!</h2>
-        <p class="mb-4 fs-5 opacity-90">Up to 40% off on selected breads. Limited time only.</p>
-        <a href="../products/index.html" class="btn btn-light btn-lg px-5 fw-bold"><i class="bi bi-lightning-fill me-2"></i>Shop the Sale</a>
+    <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="3"></button>
       </div>
+      <div class="carousel-inner rounded-4 overflow-hidden">
+        <div class="carousel-item active promo-slide">
+          <a href="../product-details/index.html?product=Banana%20Cake" style="display:flex;align-items:center;justify-content:center;height:300px;">
+            <img src="../images/carousel/carouselPromo1.jpg" class="promo-thumb" alt="Banana Cake">
+          </a>
+        </div>
+        <div class="carousel-item promo-slide">
+          <a href="../product-details/index.html?product=Walnut%20Cinnamon%20Ring" style="display:flex;align-items:center;justify-content:center;height:250px;">
+            <img src="../images/carousel/carouselPromo2.jpg" class="promo-thumb" alt="Cranberry Walnut Bread">
+          </a>
+        </div>
+        <div class="carousel-item promo-slide">
+          <a href="../product-details/index.html?product=Whole%20Wheat%20Multigrain" style="display:flex;align-items:center;justify-content:center;height:250px;">
+            <img src="../images/carousel/carouselPromo3.jpg" class="promo-thumb" alt="Raisin Bread">
+          </a>
+        </div>
+        <div class="carousel-item promo-slide">
+          <a href="../product-details/index.html?product=French%20Baguette" style="display:flex;align-items:center;justify-content:center;height:250px;">
+            <img src="../images/carousel/carouselPromo4.jpg" class="promo-thumb" alt="French Baguette">
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
     </div>
   </div>
 </section>
@@ -151,7 +197,9 @@
         <h6 class="fw-bold mb-3">Products</h6>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Loaf Breads</a></li>
-          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Pastries</a></li>
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Bread Rolls</a></li>
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Pies & Pastries</a></li>
+          <li class="mb-2"><a href="../products/index.html" class="text-decoration-none" style="color:#c4a882;">Cakes</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-4">

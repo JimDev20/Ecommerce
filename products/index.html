@@ -49,6 +49,13 @@
 <!-- PRODUCTS -->
 <section style="padding:40px 0;">
   <div class="container">
+    <div class="d-flex gap-2 mb-4 justify-content-center flex-wrap" id="categoryFilter">
+      <button class="btn btn-sm btn-custom" onclick="filterCategory('all')">All</button>
+      <button class="btn btn-sm btn-outline-secondary" onclick="filterCategory('Loaf Breads')">Loaf Breads</button>
+      <button class="btn btn-sm btn-outline-secondary" onclick="filterCategory('Bread Rolls')">Bread Rolls</button>
+      <button class="btn btn-sm btn-outline-secondary" onclick="filterCategory('Pies & Pastries')">Pies &amp; Pastries</button>
+      <button class="btn btn-sm btn-outline-secondary" onclick="filterCategory('Cakes')">Cakes</button>
+    </div>
     <div class="row g-3" id="productsGrid"></div>
     <nav class="mt-4"><ul class="pagination justify-content-center" id="pagination"></ul></nav>
   </div>
