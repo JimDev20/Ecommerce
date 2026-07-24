@@ -1,10 +1,14 @@
 /* Home page styles */
 
+/* Navbar */
+.navbar { background: #2c1810; }
+
 /* Hero */
 .hero-section { background: linear-gradient(135deg, #FFF8F0 0%, #FFECD2 50%, #FCB69F 100%); padding: 80px 0; min-height: 85vh; display: flex; align-items: center; }
+.hero-text { text-align: center; }
 .hero-text h1 { color: #2c1810; line-height: 1.2; }
 .hero-text p { color: #6b4f3a; font-size: 1.15rem; }
-.hero-image-wrapper { position: relative; }
+.hero-image-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
 .hero-img { max-height: 480px; object-fit: cover; }
 .hero-image-wrapper::before { content: ''; position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: #D2691E; border-radius: 50%; opacity: .15; z-index: -1; }
 .hero-image-wrapper::after { content: ''; position: absolute; bottom: -15px; left: -15px; width: 80px; height: 80px; background: #8B4513; border-radius: 50%; opacity: .1; z-index: -1; }
