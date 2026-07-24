@@ -35,11 +35,12 @@ html, body { overflow-x: hidden; }
 .feature-icon { width: 70px; height: 70px; background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #D2691E; }
 
 /* Product Cards */
-.product-card { border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.06); transition: all .3s; background: #fff; }
+.product-card { border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.06); transition: all .3s; background: #fff; display: flex; flex-direction: column; }
 .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(139,69,19,.15); }
 .product-card .card-img-top { height: 220px; object-fit: cover; transition: transform .5s; }
 .product-card:hover .card-img-top { transform: scale(1.05); }
 .product-card .overflow-hidden { overflow: hidden; }
+.product-card .card-body { display: flex; flex-direction: column; flex-grow: 1; }
 
 /* Categories */
 .category-card { transition: all .4s; }
