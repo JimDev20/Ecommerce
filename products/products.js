@@ -36,8 +36,8 @@ function renderProducts(){
   var start=(currentPage-1)*perPage;
   var page=products.slice(start,start+perPage);
   g.innerHTML=page.map(function(p){
-    return '<div class="col-lg-3 col-md-4 col-6 mb-4"><div class="card product-card h-100"><div class="overflow-hidden">'+
-      '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div><div class="card-body">'+
+    return '<div class="col-lg-3 col-md-4 col-6 mb-4"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
+      '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div></a><div class="card-body">'+
       '<span class="badge bg-secondary-subtle text-secondary mb-1 small">'+p.cat+'</span>'+
       '<h6 class="card-title fw-bold mt-1">'+p.name+'</h6>'+
       '<p class="text-muted small mb-1" style="font-size:.8rem;">'+p.desc+'</p>'+

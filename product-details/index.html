@@ -38,7 +38,25 @@
 <section style="padding:60px 0;">
   <div class="container"><div class="row g-5">
     <div class="col-lg-6">
-      <img id="productImage" src="" class="img-fluid rounded-4 w-100" alt="" style="max-height:500px;object-fit:cover;">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner rounded-4">
+          <div class="carousel-item active"><img id="carouselImg1" src="" class="d-block w-100" alt="" style="height:500px;object-fit:cover;"></div>
+          <div class="carousel-item"><img id="carouselImg2" src="" class="d-block w-100" alt="" style="height:500px;object-fit:cover;"></div>
+          <div class="carousel-item"><img id="carouselImg3" src="" class="d-block w-100" alt="" style="height:500px;object-fit:cover;"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+      <div class="row g-2 mt-3">
+        <div class="col-4"><img id="thumb1" src="" class="img-fluid rounded thumb" style="height:80px;width:100%;object-fit:cover;cursor:pointer;" data-bs-target="#productCarousel" data-bs-slide-to="0"></div>
+        <div class="col-4"><img id="thumb2" src="" class="img-fluid rounded thumb" style="height:80px;width:100%;object-fit:cover;cursor:pointer;" data-bs-target="#productCarousel" data-bs-slide-to="1"></div>
+        <div class="col-4"><img id="thumb3" src="" class="img-fluid rounded thumb" style="height:80px;width:100%;object-fit:cover;cursor:pointer;" data-bs-target="#productCarousel" data-bs-slide-to="2"></div>
+      </div>
     </div>
     <div class="col-lg-6">
       <span id="productCategory" class="badge bg-secondary-subtle text-secondary mb-2"></span>

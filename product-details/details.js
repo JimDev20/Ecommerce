@@ -39,8 +39,15 @@ function getProduct(){
 }
 
 function renderDetails(p){
-  document.getElementById('productImage').src=p.img;
-  document.getElementById('productImage').alt=p.name;
+  document.getElementById('carouselImg1').src=p.img;
+  document.getElementById('carouselImg1').alt=p.name;
+  document.getElementById('carouselImg2').src=p.img;
+  document.getElementById('carouselImg2').alt=p.name;
+  document.getElementById('carouselImg3').src=p.img;
+  document.getElementById('carouselImg3').alt=p.name;
+  document.getElementById('thumb1').src=p.img;
+  document.getElementById('thumb2').src=p.img;
+  document.getElementById('thumb3').src=p.img;
   document.getElementById('productCategory').textContent=p.cat;
   document.getElementById('productName').textContent=p.name;
   document.getElementById('productPrice').innerHTML='&#8369;'+p.price;
