@@ -49,6 +49,7 @@ function filterCategory(cat){
   if(idx[cat]!==undefined){btns[idx[cat]].className='btn btn-sm btn-custom';}
   renderProducts();
   renderPagination();
+  observeAnimations();
 }
 
 function getFilteredProducts(){
@@ -61,8 +62,8 @@ function renderProducts(){
   var filtered=getFilteredProducts();
   var start=(currentPage-1)*perPage;
   var page=filtered.slice(start,start+perPage);
-  g.innerHTML=page.map(function(p){
-    return '<div class="col-lg-3 col-md-4 col-6 mb-4"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
+  g.innerHTML=page.map(function(p,i){
+    return '<div class="col-lg-3 col-md-4 col-6 mb-4 scroll-animate stagger-'+((i%8)+1)+'"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
       '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div></a><div class="card-body">'+
       '<span class="badge bg-secondary-subtle text-secondary mb-1 small">'+p.cat+'</span>'+
       '<h6 class="card-title fw-bold mt-1">'+p.name+'</h6>'+
@@ -95,7 +96,20 @@ function goPage(p){
   currentPage=p;
   renderProducts();
   renderPagination();
+  observeAnimations();
   window.scrollTo({top:200,behavior:'smooth'});
+}
+
+var animObserver;
+function observeAnimations(){
+  if(!animObserver){
+    animObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){entry.target.classList.add('visible');}
+      });
+    },{threshold:0.1,rootMargin:'0px 0px -20px 0px'});
+  }
+  document.querySelectorAll('.scroll-animate').forEach(function(el){animObserver.observe(el);});
 }
 
 document.addEventListener('DOMContentLoaded',function(){
@@ -107,6 +121,7 @@ document.addEventListener('DOMContentLoaded',function(){
     renderProducts();
     renderPagination();
   }
+  observeAnimations();
 
   var c=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
   var n=c.reduce(function(s,i){return s+i.qty},0);

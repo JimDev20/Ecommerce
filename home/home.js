@@ -1,4 +1,4 @@
-// Home page - featured products + nav cart count
+// Home page - featured products + nav cart count + scroll animations
 var featuredProducts = [
   {name:"French Baguette",price:45,img:"../images/products/frenchBaguette.jpg"},
   {name:"Whole Wheat Pandesal",price:102,img:"../images/products/wholeWheatPandesal.jpg"},
@@ -11,8 +11,8 @@ var featuredProducts = [
 function renderFeatured(list){
   var g=document.getElementById('featuredGrid');
   if(!g)return;
-  g.innerHTML=list.map(function(p){
-    return '<div class="col-lg-2 col-md-4 col-6"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
+  g.innerHTML=list.map(function(p,i){
+    return '<div class="col-lg-2 col-md-4 col-6 mb-4 scroll-animate stagger-'+(i+1)+'"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
       '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div></a><div class="card-body pb-3">'+
       '<h6 class="card-title fw-bold mt-1 mb-1" style="font-size:.9rem;">'+p.name+'</h6>'+
       '<p class="fw-bold text-danger mb-1" style="font-size:.95rem;">&#8369;'+p.price+'</p>'+
@@ -34,6 +34,19 @@ document.addEventListener('DOMContentLoaded',function(){
     if(!hero)return;
     var scroll=window.pageYOffset;
     hero.style.backgroundPositionY=scroll*0.3+'px';
+  });
+
+  // Scroll animations with IntersectionObserver
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+
+  document.querySelectorAll('.scroll-animate').forEach(function(el){
+    observer.observe(el);
   });
 });
 
