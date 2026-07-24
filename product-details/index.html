@@ -38,36 +38,21 @@
 <section style="padding:60px 0;">
   <div class="container"><div class="row g-5">
     <div class="col-lg-6">
-      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators"><button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button><button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button><button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button><button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3"></button></div>
-        <div class="carousel-inner rounded-4">
-          <div class="carousel-item active"><img src="../images/products/product1.jpg" class="d-block w-100" alt="Front"></div>
-          <div class="carousel-item"><img src="../images/products/product1-2.jpg" class="d-block w-100" alt="Side"></div>
-          <div class="carousel-item"><img src="../images/products/product1-3.jpg" class="d-block w-100" alt="Back"></div>
-          <div class="carousel-item"><img src="../images/products/product1-4.jpg" class="d-block w-100" alt="Box"></div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-      </div>
-      <div class="row g-2 mt-3">
-        <div class="col-3"><img src="../images/products/product1.jpg" class="img-fluid rounded thumb" style="height:80px;width:100%;object-fit:cover;" data-bs-target="#productCarousel" data-bs-slide-to="0"></div>
-        <div class="col-3"><img src="../images/products/product1-2.jpg" class="img-fluid rounded thumb" style="height:80px;width:100%;object-fit:cover;" data-bs-target="#productCarousel" data-bs-slide-to="1"></div>
-        <div class="col-3"><img src="../images/products/product1-3.jpg" class="img-fluid rounded thumb" style="height:80px;width:100%;object-fit:cover;" data-bs-target="#productCarousel" data-bs-slide-to="2"></div>
-        <div class="col-3"><img src="../images/products/product1-4.jpg" class="img-fluid rounded thumb" style="height:80px;width:100%;object-fit:cover;" data-bs-target="#productCarousel" data-bs-slide-to="3"></div>
-      </div>
+      <img id="productImage" src="" class="img-fluid rounded-4 w-100" alt="" style="max-height:500px;object-fit:cover;">
     </div>
     <div class="col-lg-6">
-      <h1>French Baguette</h1>
-      <p class="fs-3 fw-bold text-danger">&#8369;85</p>
-      <p class="lead">Classic French baguette with a crispy golden crust and soft, airy interior. Freshly baked daily using traditional methods.</p>
+      <span id="productCategory" class="badge bg-secondary-subtle text-secondary mb-2"></span>
+      <h1 id="productName"></h1>
+      <p class="fs-3 fw-bold text-danger" id="productPrice"></p>
+      <p class="lead" id="productDesc"></p>
       <hr>
-      <button class="btn btn-custom btn-lg w-100 mb-3" onclick="alert('Added to cart: French Baguette')"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+      <button id="addToCartBtn" class="btn btn-custom btn-lg w-100 mb-3"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
       <button class="btn btn-outline-secondary btn-lg w-100 mb-4" data-bs-toggle="modal" data-bs-target="#sizeGuideModal"><i class="bi bi-rulers me-2"></i>Size Guide</button>
       <div class="accordion" id="specsAcc">
         <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#specs"><i class="bi bi-list-check me-2"></i>Specifications</button></h2>
-        <div id="specs" class="accordion-collapse collapse show" data-bs-parent="#specsAcc"><div class="accordion-body"><table class="table table-borderless mb-0"><tr><td class="text-muted fw-bold" style="width:40%">Brand</td><td>Uncle George</td></tr><tr><td class="text-muted fw-bold">Type</td><td>French Baguette</td></tr><tr><td class="text-muted fw-bold">Weight</td><td>500g</td></tr><tr><td class="text-muted fw-bold">Shelf Life</td><td>3-5 days</td></tr><tr><td class="text-muted fw-bold">Ingredients</td><td>Flour, Water, Yeast, Salt</td></tr></table></div></div></div>
+        <div id="specs" class="accordion-collapse collapse show" data-bs-parent="#specsAcc"><div class="accordion-body"><table class="table table-borderless mb-0" id="specsTable"></table></div></div></div>
         <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#desc"><i class="bi bi-info-circle me-2"></i>Description</button></h2>
-        <div id="desc" class="accordion-collapse collapse" data-bs-parent="#specsAcc"><div class="accordion-body"><p>Our French Baguette is baked fresh daily using premium flour and traditional baking methods. The exterior is perfectly crispy with a golden-brown crust, while the interior remains soft and airy.</p></div></div></div>
+        <div id="desc" class="accordion-collapse collapse" data-bs-parent="#specsAcc"><div class="accordion-body" id="descBody"></div></div></div>
         <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ship"><i class="bi bi-box me-2"></i>Delivery & Returns</button></h2>
         <div id="ship" class="accordion-collapse collapse" data-bs-parent="#specsAcc"><div class="accordion-body"><p><strong>Delivery:</strong> Free same-day delivery for orders over &#8369;200.</p><p><strong>Returns:</strong> Contact us within 24 hours for a full replacement or refund.</p></div></div></div>
       </div>

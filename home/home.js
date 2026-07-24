@@ -1,11 +1,11 @@
 // Home page - featured products + nav cart count
 var featuredProducts = [
-  {name:"French Baguette",price:85,img:"../images/products/p1-baguette.jpg",cat:"Loaf Breads"},
-  {name:"White Bread",price:65,img:"../images/products/p2-white-bread.jpg",cat:"Loaf Breads"},
-  {name:"Whole Wheat Bread",price:75,img:"../images/products/p3-wheat-bread.jpg",cat:"Loaf Breads"},
-  {name:"Cheese Bread",price:95,img:"../images/products/p5-cheese-bread.jpg",cat:"Loaf Breads"},
-  {name:"Pinoy Pandesal",price:22,img:"../images/products/p6-pandesal.jpg",cat:"Pastries"},
-  {name:"Ensaymada",price:45,img:"../images/products/p9-ensaymada.jpg",cat:"Pastries"}
+  {name:"French Baguette",price:85,img:"../images/products/frenchBaguette.jpg",cat:"Loaf Breads"},
+  {name:"White Bread",price:65,img:"../images/products/wwLoaf.jpg",cat:"Loaf Breads"},
+  {name:"Cheese Bread",price:95,img:"../images/products/cranberryWalnutBread.jpg",cat:"Loaf Breads"},
+  {name:"Pinoy Pandesal",price:22,img:"../images/products/wwPandesal.jpg",cat:"Pastries"},
+  {name:"Ensaymada",price:45,img:"../images/products/mamonRolls.jpg",cat:"Pastries"},
+  {name:"Ube Pandan",price:50,img:"../images/products/ubePandan.jpg",cat:"Pastries"}
 ];
 
 function renderFeatured(list){

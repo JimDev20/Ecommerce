@@ -1,17 +1,31 @@
 // Products page - product grid, pagination, add to cart
 var products=[
-  {name:"French Baguette",price:85,img:"../images/products/p1-baguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
-  {name:"White Bread",price:65,img:"../images/products/p2-white-bread.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},
-  {name:"Whole Wheat Bread",price:75,img:"../images/products/p3-wheat-bread.jpg",cat:"Loaf Breads",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
-  {name:"Butter Bread",price:85,img:"../images/products/p4-butter-bread.jpg",cat:"Loaf Breads",desc:"Buttery and soft. Great for toast and breakfast. 550g."},
-  {name:"Cheese Bread",price:95,img:"../images/products/p5-cheese-bread.jpg",cat:"Loaf Breads",desc:"Rich cheese-flavored loaf. A family favorite. 550g."},
-  {name:"Butter Milk Bread",price:90,img:"../images/products/p12-butter-milk.jpg",cat:"Loaf Breads",desc:"Creamy milk-infused loaf. Extra soft texture. 550g."},
-  {name:"Pinoy Pandesal",price:22,img:"../images/products/p6-pandesal.jpg",cat:"Pastries",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
-  {name:"Chicken Pastel",price:55,img:"../images/products/p7-chicken-pastel.jpg",cat:"Pastries",desc:"Savory chicken-filled pastry. Flaky and delicious."},
-  {name:"Chocolate Pandesal",price:35,img:"../images/products/p8-chocolate-pandesal.jpg",cat:"Pastries",desc:"Sweet chocolate pandesal. A twist on the classic."},
-  {name:"Ensaymada",price:45,img:"../images/products/p9-ensaymada.jpg",cat:"Pastries",desc:"Soft brioche topped with butter, sugar, and cheese."},
-  {name:"Spanish Bread",price:35,img:"../images/products/p10-spanish-bread.jpg",cat:"Pastries",desc:"Sweet Filipino-style Spanish bread rolls. 180g pack."},
-  {name:"Pan De Coco",price:40,img:"../images/products/p11-pan-de-coco.jpg",cat:"Pastries",desc:"Sweet coconut-filled bread bun. Classic Filipino treat."}
+  {name:"French Baguette",price:85,img:"../images/products/frenchBaguette.jpg",cat:"Loaf Breads",desc:"Classic French baguette. Crispy crust, soft inside. 500g."},
+  {name:"White Bread",price:65,img:"../images/products/wwLoaf.jpg",cat:"Loaf Breads",desc:"Soft and fluffy white loaf. Perfect for sandwiches. 550g."},
+  {name:"Whole Wheat Bread",price:75,img:"../images/products/wwMultigrain.jpg",cat:"Loaf Breads",desc:"Healthy whole wheat loaf. High fiber, great taste. 550g."},
+  {name:"Butter Bread",price:85,img:"../images/products/hamburgerBuns.jpg",cat:"Loaf Breads",desc:"Buttery and soft. Great for toast and breakfast. 550g."},
+  {name:"Cheese Bread",price:95,img:"../images/products/cranberryWalnutBread.jpg",cat:"Loaf Breads",desc:"Rich cheese-flavored loaf. A family favorite. 550g."},
+  {name:"Butter Milk Bread",price:90,img:"../images/products/wwPandesal.jpg",cat:"Loaf Breads",desc:"Creamy milk-infused loaf. Extra soft texture. 550g."},
+  {name:"Pinoy Pandesal",price:22,img:"../images/products/wwPandesal.jpg",cat:"Pastries",desc:"Classic Filipino pandesal. Soft, warm, and affordable. 250g."},
+  {name:"Chicken Pastel",price:55,img:"../images/products/chickenPie.jpg",cat:"Pastries",desc:"Savory chicken-filled pastry. Flaky and delicious."},
+  {name:"Chocolate Pandesal",price:35,img:"../images/products/chocolateCake.jpg",cat:"Pastries",desc:"Sweet chocolate pandesal. A twist on the classic."},
+  {name:"Ensaymada",price:45,img:"../images/products/mamonRolls.jpg",cat:"Pastries",desc:"Soft brioche topped with butter, sugar, and cheese."},
+  {name:"Spanish Bread",price:35,img:"../images/products/cinnamonRolls.jpg",cat:"Pastries",desc:"Sweet Filipino-style Spanish bread rolls. 180g pack."},
+  {name:"Pan De Coco",price:40,img:"../images/products/mochiBread.jpg",cat:"Pastries",desc:"Sweet coconut-filled bread bun. Classic Filipino treat."},
+  {name:"Banana Cake",price:55,img:"../images/products/bananCake.jpg",cat:"Pastries",desc:"Moist and fluffy banana cake. Made with real bananas."},
+  {name:"Chicken Pie",price:45,img:"../images/products/chickenPie.jpg",cat:"Pastries",desc:"Savory chicken-filled pie. Flaky crust, creamy filling."},
+  {name:"Chocolate Cake",price:65,img:"../images/products/chocolateCake.jpg",cat:"Pastries",desc:"Rich chocolate cake. Decadent and moist."},
+  {name:"Cinnamon Rolls",price:40,img:"../images/products/cinnamonRolls.jpg",cat:"Pastries",desc:"Soft cinnamon rolls with sweet glaze. Warm and fresh."},
+  {name:"Cranberry Walnut Bread",price:95,img:"../images/products/cranberryWalnutBread.jpg",cat:"Loaf Breads",desc:"Whole wheat bread with cranberries and walnuts. 500g."},
+  {name:"Egg Pandesal",price:25,img:"../images/products/eggPandesal.jpg",cat:"Pastries",desc:"Classic pandesal with egg. Soft and warm."},
+  {name:"Hamburger Buns",price:70,img:"../images/products/hamburgerBuns.jpg",cat:"Loaf Breads",desc:"Soft hamburger buns. Perfect for burgers and sandwiches."},
+  {name:"Hopia Baboy",price:35,img:"../images/products/hopiaBaboy.jpg",cat:"Pastries",desc:"Flaky pastry with savory pork filling. Classic Filipino snack."},
+  {name:"Mamon Rolls",price:30,img:"../images/products/mamonRolls.jpg",cat:"Pastries",desc:"Light and fluffy sponge cake rolls. Sweet and airy."},
+  {name:"Mochi Bread",price:45,img:"../images/products/mochiBread.jpg",cat:"Pastries",desc:"Chewy mochi bread with a soft, sticky texture."},
+  {name:"Qeso Pandesal",price:28,img:"../images/products/qesoPandesal.jpg",cat:"Pastries",desc:"Cheese-flavored pandesal. Cheesy and soft."},
+  {name:"Raisin Bread",price:80,img:"../images/products/raisinBread.jpg",cat:"Loaf Breads",desc:"Sweet bread loaded with raisins. 500g."},
+  {name:"Raisin Pan De Rosa",price:45,img:"../images/products/raisinPanDeRosa.jpg",cat:"Pastries",desc:"Rose-shaped bread with raisins. Soft and sweet."},
+  {name:"Ube Pandan",price:50,img:"../images/products/ubePandan.jpg",cat:"Pastries",desc:"Purple yam and pandan flavored bread. Filipino classic."}
 ];
 
 var currentPage=1;
