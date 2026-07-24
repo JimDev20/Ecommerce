@@ -100,8 +100,14 @@ function goPage(p){
 }
 
 document.addEventListener('DOMContentLoaded',function(){
-  renderProducts();
-  renderPagination();
+  var params=new URLSearchParams(window.location.search);
+  var cat=params.get('cat');
+  if(cat){
+    filterCategory(cat);
+  } else {
+    renderProducts();
+    renderPagination();
+  }
 
   var c=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
   var n=c.reduce(function(s,i){return s+i.qty},0);
