@@ -9,3 +9,10 @@ Desktop.ini
 *.swp
 *.swo
 *~
+
+# Project files (not for GitHub)
+.github/
+diagrams/
+.gitignore
+.nojekyll
+README.md
