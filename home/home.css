@@ -59,7 +59,7 @@ html, body { overflow-x: hidden; }
 #promoCarousel .carousel-control-next { opacity: .85; }
 #promoCarousel .carousel-control-prev:hover,
 #promoCarousel .carousel-control-next:hover { opacity: 1; }
-#promoCarousel .carousel-indicators { position: static; margin: 15px 0 0; }
+#promoCarousel .carousel-indicators { position: static !important; margin: 15px 0 0 !important; bottom: auto !important; left: auto !important; right: auto !important; top: auto !important; text-align: center; }
 
 /* Newsletter */
 .newsletter-card { background: linear-gradient(135deg, #2c1810, #5D4037); }
