@@ -72,7 +72,7 @@ function renderProducts(){
       '<p class="fw-bold text-danger mb-2">&#8369;'+p.price+'</p>'+
       '<div class="d-flex gap-2 mt-auto">'+
       '<a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="btn btn-sm btn-outline-secondary flex-grow-1"><i class="bi bi-eye me-1"></i>View Details</a>'+
-      '<button class="btn btn-sm btn-custom" onclick="addToCart(\''+p.name+'\','+p.price+',\''+p.img+'\')"><i class="bi bi-cart-plus"></i></button>'+
+      '<button class="btn btn-sm btn-custom add-to-cart-btn" data-name="'+p.name.replace(/"/g,'&quot;')+'" data-price="'+p.price+'" data-img="'+p.img.replace(/"/g,'&quot;')+'"><i class="bi bi-cart-plus"></i></button>'+
       '</div></div></div></div>';
   }).join('');
 }
@@ -114,6 +114,23 @@ function observeAnimations(){
 }
 
 document.addEventListener('DOMContentLoaded',function(){
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest('.add-to-cart-btn');
+    if(!btn)return;
+    var name=btn.getAttribute('data-name');
+    var price=Number(btn.getAttribute('data-price'));
+    var image=btn.getAttribute('data-img');
+    var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
+    var found=false;
+    for(var i=0;i<cart.length;i++){if(cart[i].name===name){cart[i].qty++;found=true;break;}}
+    if(!found)cart.push({name:name,price:price,img:image,qty:1});
+    localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
+    showToast('Added to cart: '+name,'success');
+    var n=cart.reduce(function(s,i){return s+i.qty},0);
+    var el=document.getElementById('navCartCount');
+    if(el){el.textContent=n;el.classList.add('badge','bg-danger');}
+  });
+
   var params=new URLSearchParams(window.location.search);
   var cat=params.get('cat');
   if(cat){
@@ -138,14 +155,3 @@ function showToast(message,type){
   new bootstrap.Toast(t,{delay:3000}).show();
 }
 
-function addToCart(name,price,image){
-  var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
-  var found=false;
-  for(var i=0;i<cart.length;i++){if(cart[i].name===name){cart[i].qty++;found=true;break;}}
-  if(!found)cart.push({name:name,price:price,img:image,qty:1});
-  localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
-  showToast('Added to cart: '+name,'success');
-  var n=cart.reduce(function(s,i){return s+i.qty},0);
-  var el=document.getElementById('navCartCount');
-  if(el){el.textContent=n;el.classList.add('badge','bg-danger');}
-}

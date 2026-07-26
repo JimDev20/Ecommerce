@@ -16,7 +16,7 @@ function renderFeatured(list){
       '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div></a><div class="card-body pb-3">'+
       '<h6 class="card-title fw-bold mt-1 mb-1" style="font-size:.9rem;">'+p.name+'</h6>'+
       '<p class="fw-bold text-danger mb-1" style="font-size:.95rem;">&#8369;'+p.price+'</p>'+
-      '<button class="btn btn-sm btn-custom w-100 mt-auto" onclick="addToCart(\''+p.name+'\','+p.price+',\''+p.img+'\')"><i class="bi bi-cart-plus me-1"></i>Add</button>'+
+      '<button class="btn btn-sm btn-custom w-100 mt-auto add-to-cart-btn" data-name="'+p.name.replace(/"/g,'&quot;')+'" data-price="'+p.price+'" data-img="'+p.img.replace(/"/g,'&quot;')+'"><i class="bi bi-cart-plus me-1"></i>Add</button>'+
       '</div></div></div>';
   }).join('');
 }
@@ -27,6 +27,23 @@ document.addEventListener('DOMContentLoaded',function(){
   var n=c.reduce(function(s,i){return s+i.qty},0);
   var el=document.getElementById('navCartCount');
   if(el&&n>0){el.textContent=n;el.classList.add('badge','bg-danger');}
+
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest('.add-to-cart-btn');
+    if(!btn)return;
+    var name=btn.getAttribute('data-name');
+    var price=Number(btn.getAttribute('data-price'));
+    var image=btn.getAttribute('data-img');
+    var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
+    var found=false;
+    for(var i=0;i<cart.length;i++){if(cart[i].name===name){cart[i].qty++;found=true;break;}}
+    if(!found)cart.push({name:name,price:price,img:image,qty:1});
+    localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
+    showToast('Added to cart: '+name,'success');
+    var nn=cart.reduce(function(s,i){return s+i.qty},0);
+    var el2=document.getElementById('navCartCount');
+    if(el2){el2.textContent=nn;el2.classList.add('badge','bg-danger');}
+  });
 
   // Parallax hero background
   window.addEventListener('scroll',function(){
@@ -56,16 +73,4 @@ function showToast(message,type){
   b.textContent=message;
   t.className='toast align-items-center text-bg-'+(type||'success')+' border-0';
   new bootstrap.Toast(t,{delay:3000}).show();
-}
-
-function addToCart(name,price,image){
-  var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
-  var found=false;
-  for(var i=0;i<cart.length;i++){if(cart[i].name===name){cart[i].qty++;found=true;break;}}
-  if(!found)cart.push({name:name,price:price,img:image,qty:1});
-  localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
-  showToast('Added to cart: '+name,'success');
-  var n=cart.reduce(function(s,i){return s+i.qty},0);
-  var el=document.getElementById('navCartCount');
-  if(el){el.textContent=n;el.classList.add('badge','bg-danger');}
 }
