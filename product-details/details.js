@@ -95,26 +95,13 @@ function updateNavBadge(){
 function renderRelatedProducts(current){
   var related=allProducts.filter(function(p){return p.cat===current.cat&&p.name!==current.name;});
   if(related.length===0)return;
-  related=related.slice(0,6);
-  var slides=[];
-  for(var i=0;i<related.length;i+=3){
-    slides.push(related.slice(i,i+3));
-  }
-  var inner=document.getElementById('relatedInner');
-  var indicators=document.getElementById('relatedIndicators');
-  if(!inner||!indicators)return;
-  var ih='';
-  var indh='';
-  slides.forEach(function(slide,i){
-    ih+='<div class="carousel-item'+(i===0?' active':'')+'"><div class="row g-4 justify-content-center px-4">';
-    slide.forEach(function(p){
-      ih+='<div class="col-lg-4 col-md-6"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden"><img src="'+p.img+'" class="card-img-top" alt="'+p.name+'" loading="lazy"></div></a><div class="card-body"><span class="badge bg-secondary-subtle text-secondary mb-1 small">'+p.cat+'</span><h6 class="card-title fw-bold mt-1">'+p.name+'</h6><p class="fw-bold text-danger mb-2">&#8369;'+p.price+'</p><button class="btn btn-sm btn-custom w-100" onclick="addToCartRelated(\''+p.name+'\','+p.price+',\''+p.img+'\')"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button></div></div></div>';
-    });
-    ih+='</div></div>';
-    indh+='<button type="button" data-bs-target="#relatedCarousel" data-bs-slide-to="'+i+'"'+(i===0?' class="active"':'')+'></button>';
-  });
-  inner.innerHTML=ih;
-  indicators.innerHTML=indh;
+  for(var i=related.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=related[i];related[i]=related[j];related[j]=tmp;}
+  related=related.slice(0,3);
+  var g=document.getElementById('relatedGrid');
+  if(!g)return;
+  g.innerHTML=related.map(function(p){
+    return '<div class="col-lg-4 col-md-6"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden"><img src="'+p.img+'" class="card-img-top" alt="'+p.name+'" loading="lazy"></div></a><div class="card-body"><span class="badge bg-secondary-subtle text-secondary mb-1 small">'+p.cat+'</span><h6 class="card-title fw-bold mt-1">'+p.name+'</h6><p class="fw-bold text-danger mb-2">&#8369;'+p.price+'</p><button class="btn btn-sm btn-custom w-100" onclick="addToCartRelated(\''+p.name+'\','+p.price+',\''+p.img+'\')"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button></div></div></div>';
+  }).join('');
 }
 
 function addToCartRelated(name,price,image){
