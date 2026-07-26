@@ -50,13 +50,21 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 
+function showToast(message,type){
+  var t=document.getElementById('appToast'),b=document.getElementById('appToastBody');
+  if(!t||!b)return;
+  b.textContent=message;
+  t.className='toast align-items-center text-bg-'+(type||'success')+' border-0';
+  new bootstrap.Toast(t,{delay:3000}).show();
+}
+
 function addToCart(name,price,image){
   var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
   var found=false;
   for(var i=0;i<cart.length;i++){if(cart[i].name===name){cart[i].qty++;found=true;break;}}
   if(!found)cart.push({name:name,price:price,img:image,qty:1});
   localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
-  alert('Added to cart: '+name);
+  showToast('Added to cart: '+name,'success');
   var n=cart.reduce(function(s,i){return s+i.qty},0);
   var el=document.getElementById('navCartCount');
   if(el){el.textContent=n;el.classList.add('badge','bg-danger');}

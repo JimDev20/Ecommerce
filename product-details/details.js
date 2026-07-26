@@ -34,6 +34,14 @@ var allProducts=[
   {name:"Red Velvet Chocolate Cake",price:300,img:"../images/products/redVelvetChocolateCake.jpg",cat:"Cakes",desc:"Classic red velvet cake with a rich cocoa flavor and velvety cream cheese frosting. Elegant and decadent.",specs:{Brand:"Uncle George",Type:"Red Velvet Chocolate Cake",Weight:"350g","Shelf Life":"3-5 days",Ingredients:"Flour, Cocoa Powder, Sugar, Eggs, Butter, Buttermilk, Cream Cheese"}}
 ];
 
+function showToast(message,type){
+  var t=document.getElementById('appToast'),b=document.getElementById('appToastBody');
+  if(!t||!b)return;
+  b.textContent=message;
+  t.className='toast align-items-center text-bg-'+(type||'success')+' border-0';
+  new bootstrap.Toast(t,{delay:3000}).show();
+}
+
 function getProduct(){
   var params=new URLSearchParams(window.location.search);
   var name=params.get('product');
@@ -72,7 +80,7 @@ function renderDetails(p){
     for(var i=0;i<cart.length;i++){if(cart[i].name===p.name){cart[i].qty++;found=true;break;}}
     if(!found)cart.push({name:p.name,price:finalPrice,img:p.img,qty:1});
     localStorage.setItem('unclegorg_cart',JSON.stringify(cart));
-    alert('Added to cart: '+p.name);
+    showToast('Added to cart: '+p.name,'success');
     updateNavBadge();
   };
 }
