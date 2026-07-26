@@ -49,8 +49,9 @@ html, body { overflow-x: hidden; }
 
 /* Promo Carousel */
 .promo-section { background: url('../images/carousel/carouselBackground.jpg') center/cover no-repeat; overflow: hidden; }
-.promo-section .carousel-inner { max-width: 900px; margin: 0 auto; padding: 0 60px; }
-.promo-slide { background: rgba(0,0,0,.15); padding: 40px 0; }
+.promo-section .carousel-inner { max-width: 900px; margin: 0 auto; padding: 0 60px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border-radius: 16px; }
+.promo-section .carousel-inner .carousel-item { border-radius: 16px; overflow: hidden; }
+.promo-slide { padding: 40px 0; }
 .promo-slide a { display: flex; align-items: center; justify-content: center; height: 250px; }
 .promo-thumb { height: 250px; object-fit: contain; }
 
