@@ -16,7 +16,7 @@ var allProducts=[
   {name:"Walnut Cinnamon Ring",price:155,img:"../images/products/cinnamonRolls.jpg",cat:"Bread Rolls",discount:12,desc:"Sweet Filipino-style bread rolls coated in buttery breadcrumbs with a sugar filling. 520g.",specs:{Brand:"Uncle George",Type:"Walnut Cinnamon Ring",Weight:"520g","Shelf Life":"2-3 days",Ingredients:"Flour, Sugar, Butter, Breadcrumbs, Yeast"}},
   {name:"Mochi Bread",price:150,img:"../images/products/mochiBread.jpg",cat:"Bread Rolls",desc:"Chewy bread made with glutinous rice flour. Unique stretchy texture with a soft, sweet interior.",specs:{Brand:"Uncle George",Type:"Mochi Bread",Weight:"80g","Shelf Life":"2-3 days",Ingredients:"Glutinous Rice Flour, Sugar, Butter, Milk, Eggs"}},
   {name:"Banana Cake",price:180,img:"../images/products/bananCake.jpg",cat:"Cakes",discount:12,desc:"Moist and fluffy banana cake made with real ripe bananas. Sweet, aromatic, and homemade-tasting.",specs:{Brand:"Uncle George",Type:"Banana Cake",Weight:"250g","Shelf Life":"3-5 days",Ingredients:"Flour, Banana, Sugar, Eggs, Butter, Baking Soda"}},
-  {name:"Banana Carrot Cake",price:260,img:"../images/products/bananaCarrotCake.jpg",cat:"Cakes",desc:"A healthy twist combining ripe bananas and fresh carrots. Moist, flavorful, and naturally sweet.",specs:{Brand:"Uncle George",Type:"Banana Carrot Cake",Weight:"250g","Shelf Life":"3-5 days",Ingredients:"Flour, Banana, Carrot, Sugar, Eggs, Butter, Cinnamon"}},
+  {name:"Banana Carrot Cake",price:260,img:"../images/products/bananaCarrotCake.jpg",cat:"Cakes",images:["../images/products/bananaCarrotCake.jpg","../images/3 sides carousel/banana carrot cake/bananaCarrotCake-lifestyle.png","../images/3 sides carousel/banana carrot cake/bananaCarrotCake-cross.png"],desc:"A healthy twist combining ripe bananas and fresh carrots. Moist, flavorful, and naturally sweet.",specs:{Brand:"Uncle George",Type:"Banana Carrot Cake",Weight:"250g","Shelf Life":"3-5 days",Ingredients:"Flour, Banana, Carrot, Sugar, Eggs, Butter, Cinnamon"}},
   {name:"Chocolate Cake",price:280,img:"../images/products/chocolateCake.jpg",cat:"Cakes",desc:"Rich and decadent chocolate cake with a moist, fudgy texture. A must-have for chocolate lovers.",specs:{Brand:"Uncle George",Type:"Chocolate Cake",Weight:"300g","Shelf Life":"3-5 days",Ingredients:"Flour, Cocoa Powder, Sugar, Eggs, Butter, Chocolate"}},
   {name:"Egg Pie",price:240,img:"../images/products/eggPie.jpg",cat:"Pies & Pastries",desc:"Classic Filipino egg pie with a smooth, creamy custard filling in a buttery pastry crust.",specs:{Brand:"Uncle George",Type:"Egg Pie",Weight:"200g","Shelf Life":"2-3 days",Ingredients:"Flour, Eggs, Sugar, Butter, Milk, Vanilla"}},
   {name:"Hotdog Rolls",price:80,img:"../images/products/hotdogRolls.jpg",cat:"Bread Rolls",desc:"Soft bread rolls perfect for hotdogs. Fluffy and lightly toasted.",specs:{Brand:"Uncle George",Type:"Hotdog Rolls",Weight:"60g each","Shelf Life":"2-3 days",Ingredients:"Flour, Sugar, Butter, Yeast, Milk, Eggs"}},
@@ -55,15 +55,16 @@ function getProduct(){
 function renderDetails(p){
   var inner=document.getElementById('productCarouselInner');
   var thumbs=document.getElementById('productThumbs');
+  var imgs=p.images||[p.img,p.img,p.img];
   if(inner){
-    inner.innerHTML='<div class="carousel-item active"><img src="'+p.img+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>'+
-      '<div class="carousel-item"><img src="'+p.img+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>'+
-      '<div class="carousel-item"><img src="'+p.img+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>';
+    inner.innerHTML='<div class="carousel-item active"><img src="'+imgs[0]+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>'+
+      '<div class="carousel-item"><img src="'+imgs[1]+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>'+
+      '<div class="carousel-item"><img src="'+imgs[2]+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>';
   }
   if(thumbs){
-    thumbs.innerHTML='<img src="'+p.img+'" class="product-thumb active" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="0" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid #D2691E;">'+
-      '<img src="'+p.img+'" class="product-thumb" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="1" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent;">'+
-      '<img src="'+p.img+'" class="product-thumb" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="2" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent;">';
+    thumbs.innerHTML='<img src="'+imgs[0]+'" class="product-thumb active" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="0" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid #D2691E;">'+
+      '<img src="'+imgs[1]+'" class="product-thumb" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="1" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent;">'+
+      '<img src="'+imgs[2]+'" class="product-thumb" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="2" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent;">';
     thumbs.querySelectorAll('.product-thumb').forEach(function(th){
       th.addEventListener('click',function(){
         thumbs.querySelectorAll('.product-thumb').forEach(function(t){t.style.borderColor='transparent';});
