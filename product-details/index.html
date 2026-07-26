@@ -37,7 +37,12 @@
 <section style="padding:60px 0;">
   <div class="container"><div class="row g-5">
     <div class="col-lg-6">
-      <img id="productImage" src="" class="img-fluid rounded-4 w-100" alt="" style="height:500px;object-fit:cover;">
+      <div id="productCarousel" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-inner rounded-4 overflow-hidden" id="productCarouselInner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next"><span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span></button>
+      </div>
+      <div class="d-flex gap-2 mt-3 justify-content-center" id="productThumbs"></div>
     </div>
     <div class="col-lg-6">
       <span id="productCategory" class="badge bg-secondary-subtle text-secondary mb-2"></span>

@@ -53,8 +53,30 @@ function getProduct(){
 }
 
 function renderDetails(p){
-  document.getElementById('productImage').src=p.img;
-  document.getElementById('productImage').alt=p.name;
+  var inner=document.getElementById('productCarouselInner');
+  var thumbs=document.getElementById('productThumbs');
+  if(inner){
+    inner.innerHTML='<div class="carousel-item active"><img src="'+p.img+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>'+
+      '<div class="carousel-item"><img src="'+p.img+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>'+
+      '<div class="carousel-item"><img src="'+p.img+'" class="d-block w-100" alt="'+p.name+'" style="height:500px;object-fit:cover;"></div>';
+  }
+  if(thumbs){
+    thumbs.innerHTML='<img src="'+p.img+'" class="product-thumb active" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="0" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid #D2691E;">'+
+      '<img src="'+p.img+'" class="product-thumb" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="1" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent;">'+
+      '<img src="'+p.img+'" class="product-thumb" alt="'+p.name+'" data-bs-target="#productCarousel" data-bs-slide-to="2" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent;">';
+    thumbs.querySelectorAll('.product-thumb').forEach(function(th){
+      th.addEventListener('click',function(){
+        thumbs.querySelectorAll('.product-thumb').forEach(function(t){t.style.borderColor='transparent';});
+        this.style.borderColor='#D2691E';
+      });
+    });
+    document.getElementById('productCarousel').addEventListener('slid.bs.carousel',function(e){
+      var idx=e.to;
+      thumbs.querySelectorAll('.product-thumb').forEach(function(t,i){
+        t.style.borderColor=(i===idx)?'#D2691E':'transparent';
+      });
+    });
+  }
   document.getElementById('productCategory').textContent=p.cat;
   document.getElementById('productName').textContent=p.name;
   if(p.discount){
