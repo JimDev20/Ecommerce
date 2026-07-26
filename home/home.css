@@ -16,7 +16,7 @@ html, body { overflow-x: hidden; }
 .hero-divider { width: 60px; height: 3px; background: linear-gradient(90deg, #D2691E, #FFD700); border-radius: 10px; margin: 15px auto; }
 .hero-stat { padding: 0 10px; border-left: 1px solid rgba(255,255,255,.2); }
 .hero-stat:first-child { border-left: none; }
-.hero-scroll { position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); z-index: 2; }
+.hero-scroll { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2; }
 .hero-scroll-icon { animation: scrollBounce 2s infinite; opacity: .7; }
 @keyframes scrollBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
 .hero-fade { opacity: 0; transform: translateY(25px); animation: heroFadeIn .8s forwards; }
