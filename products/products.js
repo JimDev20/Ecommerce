@@ -63,9 +63,10 @@ function renderProducts(){
   var start=(currentPage-1)*perPage;
   var page=filtered.slice(start,start+perPage);
   g.innerHTML=page.map(function(p,i){
+    var cat=p.cat.replace(/&/g,'&amp;');
     return '<div class="col-lg-3 col-md-4 col-6 mb-4 scroll-animate stagger-'+((i%8)+1)+'"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
       '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div></a><div class="card-body">'+
-      '<span class="badge bg-secondary-subtle text-secondary mb-1 small">'+p.cat+'</span>'+
+      '<span class="badge bg-secondary-subtle text-secondary mb-1 small">'+cat+'</span>'+
       '<h6 class="card-title fw-bold mt-1">'+p.name+'</h6>'+
       '<p class="text-muted small mb-1" style="font-size:.8rem;">'+p.desc+'</p>'+
       '<p class="fw-bold text-danger mb-2">&#8369;'+p.price+'</p>'+

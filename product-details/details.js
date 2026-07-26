@@ -71,7 +71,7 @@ function renderDetails(p){
     specsHtml+='<tr><td class="text-muted fw-bold" style="width:40%">'+key+'</td><td>'+p.specs[key]+'</td></tr>';
   }
   document.getElementById('specsTable').innerHTML=specsHtml;
-  document.getElementById('descBody').innerHTML='<p>'+p.desc+'</p>';
+  document.getElementById('descBody').innerHTML='<p>'+p.desc.replace(/&/g,'&amp;')+'</p>';
 
   document.getElementById('addToCartBtn').onclick=function(){
     var cart=JSON.parse(localStorage.getItem('unclegorg_cart')||'[]');
