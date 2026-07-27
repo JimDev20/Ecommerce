@@ -19,7 +19,7 @@ var products=[
   {name:"Mamon Rolls",price:30,img:"../images/products/mamonRolls.jpg",cat:"Bread Rolls",desc:"Light and fluffy sponge cake rolls. Sweet and airy."},
   {name:"Ciabatta Cheese",price:95,img:"../images/products/ciabattaCheese.jpg",cat:"Bread Rolls",desc:"Chewy ciabatta bread with real melted cheese baked into every bite. Crispy crust, soft interior."},
   {name:"Raisin Pan De Rosa",price:135,img:"../images/products/raisinPanDeRosa.jpg",cat:"Bread Rolls",desc:"Rose-shaped bread with raisins. Soft and sweet."},
-  {name:"Ube Pandan",price:130,img:"../images/products/cheesyubepandandelight.jpg",cat:"Bread Rolls",desc:"Purple yam and pandan flavored bread. Filipino classic."},
+  {name:"Ube Pandan",price:130,img:"../images/products/cheesyUbePandanDelight.jpg",cat:"Bread Rolls",desc:"Purple yam and pandan flavored bread. Filipino classic."},
   {name:"Mini Monay",price:38,img:"../images/products/miniMonay.jpg",cat:"Bread Rolls",desc:"Soft and dense Filipino bread roll. Great with coffee or soup."},
   {name:"Chicken Pie",price:60,img:"../images/products/chickenPie.jpg",cat:"Pies & Pastries",desc:"Savory chicken-filled pastry. Flaky and delicious."},
   {name:"Chunky Chicken Pie",price:580,img:"../images/products/chunkyChickenPie.jpg",cat:"Pies & Pastries",desc:"Hearty chicken pie with chunky filling. Flaky crust. 9 inch pan."},

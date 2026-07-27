@@ -5,7 +5,7 @@ var featuredProducts = [
   {name:"Sourdough Artisan Bread",price:120,img:"../images/products/sourdoughArtisanBread.jpg"},
   {name:"Chocolate Cake",price:280,img:"../images/products/chocolateCake.jpg"},
   {name:"Ciabatta Cheese",price:95,img:"../images/products/ciabattaCheese.jpg"},
-  {name:"Ube Pandan",price:130,img:"../images/products/cheesyubepandandelight.jpg"}
+  {name:"Ube Pandan",price:130,img:"../images/products/cheesyUbePandanDelight.jpg"}
 ];
 
 function renderFeatured(list){
