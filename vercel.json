@@ -1,17 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/home/index.html" },
-    { "source": "/home", "destination": "/home/index.html" },
-    { "source": "/home/:path*", "destination": "/home/:path*" },
-    { "source": "/products", "destination": "/products/index.html" },
-    { "source": "/products/:path*", "destination": "/products/index.html" },
-    { "source": "/product-details", "destination": "/product-details/index.html" },
-    { "source": "/product-details/:path*", "destination": "/product-details/index.html" },
-    { "source": "/cart", "destination": "/cart/index.html" },
-    { "source": "/cart/:path*", "destination": "/cart/index.html" },
-    { "source": "/about", "destination": "/about/index.html" },
-    { "source": "/about/:path*", "destination": "/about/index.html" },
-    { "source": "/contact", "destination": "/contact/index.html" },
-    { "source": "/contact/:path*", "destination": "/contact/index.html" }
+  "redirects": [
+    { "source": "/", "destination": "/home/", "permanent": false }
   ]
 }
