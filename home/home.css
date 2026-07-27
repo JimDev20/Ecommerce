@@ -1,5 +1,8 @@
 /* Home page styles */
 
+/* Override Bootstrap primary for softer blue */
+:root { --bs-primary: #5b86b8; --bs-primary-subtle: #dce7f2; --bs-text-muted: #6c757d; }
+
 /* Prevent horizontal overflow/zoom on mobile */
 html, body { overflow-x: hidden; }
 
