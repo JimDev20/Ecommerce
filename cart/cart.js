@@ -37,9 +37,13 @@ function renderCart(){
 
 function updateTotals(){
   var sub=cart.reduce(function(s,i){return s+i.price*i.qty},0);
+  var delivery=sub>=200?0:50;
   var tax=sub*0.12;
-  var total=sub+tax;
+  var total=sub+delivery+tax;
   document.getElementById('cartTotal').textContent='₱'+sub.toFixed(2);
+  var delEl=document.getElementById('deliveryFee');
+  if(delivery===0){delEl.textContent='Free';delEl.className='text-success';}
+  else{delEl.textContent='₱'+delivery.toFixed(2);delEl.className='';}
   document.getElementById('taxAmount').textContent='₱'+tax.toFixed(2);
   document.getElementById('grandTotal').textContent='₱'+total.toFixed(2);
 }
