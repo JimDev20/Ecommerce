@@ -12,7 +12,7 @@ function renderFeatured(list){
   var g=document.getElementById('featuredGrid');
   if(!g)return;
   g.innerHTML=list.map(function(p,i){
-    return '<div class="col-lg-2 col-md-4 col-6 mb-4 scroll-animate stagger-'+(i+1)+'"><div class="card product-card h-100"><a href="../product-details/?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
+    return '<div class="col-lg-2 col-md-4 col-6 mb-4 scroll-animate stagger-'+(i+1)+'"><div class="card product-card h-100"><a href="../product-details/index.html?product='+encodeURIComponent(p.name)+'" class="text-decoration-none"><div class="overflow-hidden">'+
       '<img src="'+p.img+'" class="card-img-top" alt="'+p.name+'"></div></a><div class="card-body pb-3">'+
       '<h6 class="card-title fw-bold mt-1 mb-1" style="font-size:.9rem;">'+p.name+'</h6>'+
       '<p class="fw-bold text-danger mb-1" style="font-size:.95rem;">&#8369;'+p.price+'</p>'+
