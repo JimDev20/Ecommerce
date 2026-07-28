@@ -1,6 +1,6 @@
 # Uncle George Bread & Pastries - E-commerce Frontend
 
-A responsive e-commerce frontend for **Uncle George Bread & Pastries**, a Filipino bakery brand. Built as a system integration frontend project for Cavite State University.
+A responsive e-commerce frontend for **Uncle George Bread & Pastries**, a Filipino bakery brand. Built as a system integration frontend project.
 
 ## Project Structure
 
