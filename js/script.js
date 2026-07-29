@@ -224,14 +224,23 @@ function goPage(p) {
 function initProductDetails() {
   var params = new URLSearchParams(window.location.search);
   var name = params.get('product');
-  if (!name) return;
+  if (!name) { showProductError(); return; }
   var product = null;
   for (var i = 0; i < allProducts.length; i++) {
-    if (allProducts[i].name === name) { product = allProducts[i]; break; }
+    if (allProducts[i].name.toLowerCase() === name.toLowerCase()) { product = allProducts[i]; break; }
   }
-  if (!product) return;
+  if (!product) { showProductError(); return; }
   renderProductDetails(product);
   renderRelatedProducts(product);
+}
+
+function showProductError() {
+  var content = document.getElementById('productContent');
+  var related = document.getElementById('relatedSection');
+  var error = document.getElementById('productError');
+  if (content) content.classList.add('d-none');
+  if (related) related.classList.add('d-none');
+  if (error) error.classList.remove('d-none');
 }
 
 function renderProductDetails(p) {
