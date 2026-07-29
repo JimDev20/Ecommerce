@@ -53,17 +53,15 @@ var featuredProducts = [
    HELPER: detect base path
    ======================================== */
 function getBase() {
-  var path = window.location.pathname;
-  if (path.indexOf('/pages/') !== -1 || path.indexOf('/pages\\') !== -1) return '../';
-  return '';
+  return window.location.pathname !== '/' ? '../' : '';
 }
 
 function productLink(name) {
-  return getBase() + 'pages/product-details.html?product=' + encodeURIComponent(name);
+  return '/product-details/?product=' + encodeURIComponent(name);
 }
 
 function pageLink(page) {
-  return getBase() + (page === 'index' ? 'index.html' : 'pages/' + page + '.html');
+  return page === 'index' ? '/' : '/' + page + '/';
 }
 
 /* ========================================
