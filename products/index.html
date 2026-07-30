@@ -65,6 +65,24 @@
       <button class="btn btn-sm btn-outline-secondary" onclick="filterCategory('Pies & Pastries')">Pies &amp; Pastries</button>
       <button class="btn btn-sm btn-outline-secondary" onclick="filterCategory('Cakes')">Cakes</button>
     </div>
+    <div class="row g-3 align-items-center mb-4">
+      <div class="col-md-5">
+        <div class="input-group">
+          <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control" id="searchInput" placeholder="Search products..." oninput="onSearch()">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select" id="sortSelect" onchange="onSort()">
+          <option value="default">Default</option>
+          <option value="name-asc">Name A-Z</option>
+          <option value="name-desc">Name Z-A</option>
+          <option value="price-asc">Price Low-High</option>
+          <option value="price-desc">Price High-Low</option>
+        </select>
+      </div>
+      <div class="col-md-4 text-md-end text-muted small" id="resultCount"></div>
+    </div>
     <div class="row g-3" id="productsGrid"></div>
     <nav class="mt-4"><ul class="pagination justify-content-center" id="pagination"></ul></nav>
   </div>

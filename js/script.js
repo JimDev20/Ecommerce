@@ -148,12 +148,30 @@ function initHome() {
 var prodCurrentPage = 1;
 var prodPerPage = 8;
 var prodCurrentCategory = 'all';
+var prodSearchTerm = '';
+var prodSortBy = 'default';
 
 function initProducts() {
   prodCurrentPage = 1;
   var params = new URLSearchParams(window.location.search);
   var cat = params.get('cat');
   prodCurrentCategory = cat || 'all';
+  renderProducts();
+  renderPagination();
+  setTimeout(function() { observeAnimations(); }, 100);
+}
+
+function onSearch() {
+  prodSearchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+  prodCurrentPage = 1;
+  renderProducts();
+  renderPagination();
+  setTimeout(function() { observeAnimations(); }, 100);
+}
+
+function onSort() {
+  prodSortBy = document.getElementById('sortSelect').value;
+  prodCurrentPage = 1;
   renderProducts();
   renderPagination();
   setTimeout(function() { observeAnimations(); }, 100);
@@ -172,14 +190,36 @@ function filterCategory(cat) {
 }
 
 function getFilteredProducts() {
-  if (prodCurrentCategory === 'all') return allProducts;
-  return allProducts.filter(function(p) { return p.cat === prodCurrentCategory; });
+  var list = allProducts;
+  if (prodCurrentCategory !== 'all') {
+    list = list.filter(function(p) { return p.cat === prodCurrentCategory; });
+  }
+  if (prodSearchTerm) {
+    list = list.filter(function(p) {
+      return p.name.toLowerCase().indexOf(prodSearchTerm) !== -1 ||
+             p.desc.toLowerCase().indexOf(prodSearchTerm) !== -1;
+    });
+  }
+  if (prodSortBy === 'name-asc') {
+    list.sort(function(a, b) { return a.name.localeCompare(b.name); });
+  } else if (prodSortBy === 'name-desc') {
+    list.sort(function(a, b) { return b.name.localeCompare(a.name); });
+  } else if (prodSortBy === 'price-asc') {
+    list.sort(function(a, b) { return a.price - b.price; });
+  } else if (prodSortBy === 'price-desc') {
+    list.sort(function(a, b) { return b.price - a.price; });
+  }
+  return list;
 }
 
 function renderProducts() {
   var g = document.getElementById('productsGrid');
   if (!g) return;
   var filtered = getFilteredProducts();
+  var countEl = document.getElementById('resultCount');
+  if (countEl) {
+    countEl.textContent = filtered.length + ' product' + (filtered.length !== 1 ? 's' : '') + ' found';
+  }
   var start = (prodCurrentPage - 1) * prodPerPage;
   var page = filtered.slice(start, start + prodPerPage);
   g.innerHTML = page.map(function(p, i) {
