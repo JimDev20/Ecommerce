@@ -67,6 +67,11 @@ function pageLink(page) {
 /* ========================================
    UTILITY FUNCTIONS
    ======================================== */
+function setMeta(property, content) {
+  var el = document.querySelector('meta[property="' + property + '"], meta[name="' + property + '"]');
+  if (el) { el.setAttribute('content', content); }
+}
+
 function showToast(message, type) {
   var t = document.getElementById('appToast'), b = document.getElementById('appToastBody');
   if (!t || !b) return;
@@ -222,14 +227,20 @@ function goPage(p) {
 function initProductDetails() {
   var params = new URLSearchParams(window.location.search);
   var name = params.get('product');
-  if (!name) { showProductError(); return; }
+  if (!name) { hideLoading(); showProductError(); return; }
   var product = null;
   for (var i = 0; i < allProducts.length; i++) {
     if (allProducts[i].name.toLowerCase() === name.toLowerCase()) { product = allProducts[i]; break; }
   }
-  if (!product) { showProductError(); return; }
+  if (!product) { hideLoading(); showProductError(); return; }
+  hideLoading();
   renderProductDetails(product);
   renderRelatedProducts(product);
+}
+
+function hideLoading() {
+  var el = document.getElementById('productLoading');
+  if (el) { el.classList.add('d-none'); }
 }
 
 function showProductError() {
@@ -239,12 +250,27 @@ function showProductError() {
   if (content) content.classList.add('d-none');
   if (related) related.classList.add('d-none');
   if (error) error.classList.remove('d-none');
+  hideLoading();
 }
 
 function renderProductDetails(p) {
+  var content = document.getElementById('productContent');
   var inner = document.getElementById('productCarouselInner');
   var thumbs = document.getElementById('productThumbs');
   var imgs = p.images || [p.img, p.img, p.img];
+  if (content) content.classList.remove('d-none');
+
+  // Update dynamic SEO meta tags
+  var desc = p.name + ' - ' + p.desc;
+  document.title = p.name + ' - Uncle George';
+  setMeta('description', desc);
+  setMeta('og:title', p.name + ' - Uncle George');
+  setMeta('og:description', desc);
+  setMeta('twitter:title', p.name + ' - Uncle George');
+  setMeta('twitter:description', desc);
+  setMeta('og:url', 'https://unclegeorgebakedgoods.vercel.app/product-details/?product=' + encodeURIComponent(p.name));
+  setMeta('og:image', 'https://unclegeorgebakedgoods.vercel.app' + p.img);
+
   if (inner) {
     inner.innerHTML = '<div class="carousel-item active"><img src="' + imgs[0] + '" class="d-block w-100" alt="' + p.name + '" style="height:500px;object-fit:cover;"></div>' +
       '<div class="carousel-item"><img src="' + imgs[1] + '" class="d-block w-100" alt="' + p.name + '" style="height:500px;object-fit:cover;"></div>' +
@@ -279,7 +305,6 @@ function renderProductDetails(p) {
     document.getElementById('productPrice').innerHTML = '&#8369;' + p.price;
   }
   document.getElementById('productDesc').textContent = p.desc;
-  document.title = p.name + ' - Uncle George';
 
   var specsHtml = '';
   for (var key in p.specs) {
@@ -432,6 +457,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   saveCart(cart);
   updateNavBadge();
+
+  // Sync cart across browser tabs
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'unclegorg_cart') {
+      updateNavBadge();
+      if (document.getElementById('cartBody')) { initCart(); }
+    }
+  });
 
   // Delegated add-to-cart clicks
   document.addEventListener('click', function(e) {
